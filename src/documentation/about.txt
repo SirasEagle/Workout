@@ -1,0 +1,10 @@
+In this program, you can view the exercises you made, as well as statistics about them.
+
+Window 1:
+A table with date and exercises made
+
+Window 2:
+One row per exercise and how it evolved
+
+Window 3:
+ 
