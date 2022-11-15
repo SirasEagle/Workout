@@ -1,6 +1,7 @@
 package logic;
 
 import Design.Colors;
+import Design.eColor;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -153,8 +154,9 @@ public class ExerciseManager {
 	 * 
 	 * @param exeIndex The index of the exercise, use this.index
 	 * @return the selected
+	 * @throws FileNotFoundException
 	 */
-	protected static int getMedRep(int exeIndex) {
+	protected static int getMedRep(int exeIndex) throws FileNotFoundException {
 		int ret = 0;
 
 		if (Main.getUserFlag() == 0) {
@@ -217,66 +219,15 @@ public class ExerciseManager {
 					break;
 			}
 		} else if (Main.getUserFlag() == 1) {
-			switch (exeIndex) {
-				case 0:
-					ret = 15;
-					break;
-				case 1:
-					ret = 9;
-					break;
-				case 2:
-					ret = 25;
-					break;
-				case 3:
-					ret = 20;
-					break;
-				case 4:
-					ret = 9;
-					break;
-				case 5:
-					ret = 10;
-					break;
-				case 6:
-					ret = 8;
-					break;
-				case 7:
-					ret = 12;
-					break;
-				case 8:
-					ret = 12;
-					break;
-				case 9:
-					ret = 9;
-					break;
-				case 10:
-					ret = 7;
-					break;
-				case 11:
-					ret = 5;
-					break;
-				case 12:
-					ret = 15;
-					break;
-				case 13:
-					ret = 10;
-					break;
-				case 14:
-					ret = 10;
-					break;
-				case 15:
-					ret = 15;
-					break;
-				case 16:
-					ret = 15;
-					break;
-				case 17:
-					ret = 12;
-					break;
-				default:
-					break;
-			}
-		}
 
+			if (Main.exercises == null) {
+				ExerciseManager.fillExercises();
+			}
+			if (Main.exercises.size() <= exeIndex) {
+				ExerciseManager.fillExercises();
+			}
+			ret = Main.exercises.get(exeIndex).getMediumReps();
+		}
 		return ret;
 	}
 
@@ -293,7 +244,7 @@ public class ExerciseManager {
 		return (fBrightnes + 0.1f);
 	}
 
-	public static float getExeColor(int index) {
+	public static float getExeColor(int index) throws FileNotFoundException {
 		float fColor = 0f;
 
 		if (Main.getUserFlag() == 0) {
@@ -356,66 +307,16 @@ public class ExerciseManager {
 					break;
 			}
 		} else if (Main.getUserFlag() == 1) {
-			switch (index) {
-				case 0:
-					fColor = Colors.exBlue();
-					break;
-				case 1:
-					fColor = Colors.exRed();
-					break;
-				case 2:
-					fColor = Colors.exRed();
-					break;
-				case 3:
-					fColor = Colors.exRed();
-					break;
-				case 4:
-					fColor = Colors.exBlue();
-					break;
-				case 5:
-					fColor = Colors.exBlue();
-					break;
-				case 6:
-					fColor = Colors.exOrange();
-					break;
-				case 7:
-					fColor = Colors.exOrange();
-					break;
-				case 8:
-					fColor = Colors.exPink();
-					break;
-				case 9:
-					fColor = Colors.exPink();
-					break;
-				case 10:
-					fColor = Colors.exBlue();
-					break;
-				case 11:
-					fColor = Colors.exYellow();
-					break;
-				case 12:
-					fColor = Colors.exBlue();
-					break;
-				case 13:
-					fColor = Colors.exYellow();
-					break;
-				case 14:
-					fColor = Colors.exBlue();
-					break;
-				case 15:
-					fColor = Colors.exBlue();
-					break;
-				case 16:
-					fColor = Colors.exRed();
-					break;
-				case 17:
-					fColor = Colors.exCyan();
-					break;
-				default:
-					break;
-			}
-		}
 
+			if (Main.exercises == null) {
+				ExerciseManager.fillExercises();
+			}
+			if (Main.exercises.size() <= index) {
+				ExerciseManager.fillExercises();
+			}
+			eColor e = Main.exercises.get(index).getEColor();
+			fColor = ExerciseManager.getColorAsFloat(e);
+		}
 		return fColor;
 	}
 
@@ -487,7 +388,7 @@ public class ExerciseManager {
 				default:
 					break;
 			}
-		} else {
+		} else if (Main.getUserFlag() == 1) {
 
 			if (Main.exercises == null) {
 				ExerciseManager.fillExercises();
@@ -496,6 +397,37 @@ public class ExerciseManager {
 				ExerciseManager.fillExercises();
 			}
 			ret = Main.exercises.get(exeIndex).getName();
+		}
+		return ret;
+	}
+
+	private static float getColorAsFloat(eColor e) {
+		float ret = 0f;
+		switch (e) {
+			case ORANGE:
+				ret = Colors.exOrange();
+				break;
+			case PINK:
+				ret = Colors.exPink();
+				break;
+			case RED:
+				ret = Colors.exRed();
+				break;
+			case BLUE:
+				ret = Colors.exBlue();
+				break;
+			case YELLOW:
+				ret = Colors.exYellow();
+				break;
+			case CYAN:
+				ret = Colors.exCyan();
+				break;
+			case GREEN:
+				ret = Colors.exGreen();
+				break;
+			default:
+				ret = Colors.exOrange();
+				break;
 		}
 		return ret;
 	}
@@ -531,7 +463,7 @@ public class ExerciseManager {
 				e.printStackTrace();
 			}
 		}
-		System.out.println(jsonString);
+		// System.out.println(jsonString);
 
 		Gson gson = new Gson();
 		JsonParser parser = new JsonParser();
