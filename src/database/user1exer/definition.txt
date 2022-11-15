@@ -53,150 +53,60 @@ Name: Angelina
     	"index": "8",
         "name": "Biceps Curls",
         "medRep": "12",
-        "color": "orange"
+        "color": "pink"
     },
     {
     	"index": "9",
         "name": "Pull-close L",
         "medRep": "9",
-        "color": "orange"
+        "color": "pink"
     },
     {
     	"index": "10",
         "name": "Leg Raise",
-        "medRep": "8",
-        "color": "orange"
+        "medRep": "7",
+        "color": "blue"
     },
     {
     	"index": "11",
         "name": "Shoulder",
-        "medRep": "8",
-        "color": "orange"
+        "medRep": "5",
+        "color": "yellow"
     },
     {
     	"index": "12",
-        "name": "Poopin Dog",
-        "medRep": "8",
-        "color": "orange"
+        "name": "Side bend",
+        "medRep": "15",
+        "color": "blue"
     },
     {
     	"index": "13",
-        "name": "Poopin Dog",
-        "medRep": "8",
-        "color": "orange"
+        "name": "Core stabil",
+        "medRep": "10",
+        "color": "yellow"
     },
     {
     	"index": "14",
-        "name": "Poopin Dog",
-        "medRep": "8",
-        "color": "orange"
+        "name": "Bow extend.",
+        "medRep": "10",
+        "color": "blue"
     },
     {
     	"index": "15",
-        "name": "Poopin Dog",
-        "medRep": "8",
-        "color": "orange"
+        "name": "Bike",
+        "medRep": "15",
+        "color": "blue"
     },
     {
     	"index": "16",
-        "name": "Poopin Dog",
-        "medRep": "8",
-        "color": "orange"
+        "name": "Squads",
+        "medRep": "15",
+        "color": "red"
     },
     {
     	"index": "17",
-        "name": "Poopin Dog",
-        "medRep": "8",
-        "color": "orange"
+        "name": "Butterfly",
+        "medRep": "12",
+        "color": "cyan"
     }
 ]
-		
-getName:
-case 12:
-	ret = "Side bend"; // Dumbbell side bend pro seite
-	break;
-case 13:
-	ret = "Core stabil"; // Standing Core stabilization pro seite
-	break;
-case 14:
-	ret = "Bow extend."; // Bow extension pro seite
-	break;
-case 15:
-	ret = "Bike";
-	break;
-case 16:
-	ret = "Squads";
-	break;
-case 17:
-	ret = "Butterfly";
-	break;
-default:
-	break;
-}
-
-getMedRep:
-case 10:
-	ret = 7;
-	break;
-case 11:
-	ret = 5;
-	break;
-case 12:
-	ret = 15;
-	break;
-case 13:
-	ret = 10;
-	break;
-case 14:
-	ret = 10;
-	break;
-case 15:
-	ret = 15;
-	break;
-case 16:
-	ret = 15;
-	break;
-case 17:
-	ret = 12;
-	break;
-default:
-	break;
-}
-
-getExeColor:
-case 7:
-	fColor = Colors.exOrange();
-	break;
-case 8:
-	fColor = Colors.exPink();
-	break;
-case 9:
-	fColor = Colors.exPink();
-	break;
-case 10:
-	fColor = Colors.exBlue();
-	break;
-case 11:
-	fColor = Colors.exYellow();
-	break;
-case 12:
-	fColor = Colors.exBlue();
-	break;
-case 13:
-	fColor = Colors.exYellow();
-	break;
-case 14:
-	fColor = Colors.exBlue();
-	break;
-case 15:
-	fColor = Colors.exBlue();
-	break;
-case 16:
-	fColor = Colors.exRed();
-	break;
-case 17:
-	fColor = Colors.exCyan();
-	break;
-default:
-	break;
-}
