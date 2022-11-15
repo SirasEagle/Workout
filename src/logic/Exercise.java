@@ -41,6 +41,10 @@ public class Exercise {
 		return fColor;
 	}
 
+	public eColor getEColor() {
+		return eCol;
+	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
