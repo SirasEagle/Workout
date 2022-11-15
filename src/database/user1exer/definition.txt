@@ -1,112 +1,164 @@
-Name: Angelina
-
 [
     {
     	"index": "0",
         "name": "Crunches",
-        "medRep": "15",
-        "color": "blue"
+        "mediumReps": "15",
+        "eCol": "BLUE",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "1",
         "name": "Peeing Dog",
-        "medRep": "9",
-        "color": "red"
+        "mediumReps": "9",
+        "eCol": "RED",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "2",
         "name": "Scissors",
-        "medRep": "25",
-        "color": "red"
+        "mediumReps": "25",
+        "eCol": "RED",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "3",
         "name": "Crocodile",
-        "medRep": "20",
-        "color": "red"
+        "mediumReps": "20",
+        "eCol": "RED",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "4",
         "name": "SitUps",
-        "medRep": "9",
-        "color": "blue"
+        "mediumReps": "9",
+        "eCol": "BLUE",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "5",
         "name": "Ankle touch",
-        "medRep": "10",
-        "color": "blue"
+        "mediumReps": "10",
+        "eCol": "BLUE",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "6",
         "name": "Poopin Dog",
-        "medRep": "8",
-        "color": "orange"
+        "mediumReps": "8",
+        "eCol": "ORANGE",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "7",
         "name": "Bridges",
-        "medRep": "12",
-        "color": "orange"
+        "mediumReps": "12",
+        "eCol": "ORANGE",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "8",
         "name": "Biceps Curls",
-        "medRep": "12",
-        "color": "pink"
+        "mediumReps": "12",
+        "eCol": "PINK",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "9",
         "name": "Pull-close L",
-        "medRep": "9",
-        "color": "pink"
+        "mediumReps": "9",
+        "eCol": "PINK",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "10",
         "name": "Leg Raise",
-        "medRep": "7",
-        "color": "blue"
+        "mediumReps": "7",
+        "eCol": "BLUE",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "11",
         "name": "Shoulder",
-        "medRep": "5",
-        "color": "yellow"
+        "mediumReps": "5",
+        "eCol": "YELLOW",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "12",
         "name": "Side bend",
-        "medRep": "15",
-        "color": "blue"
+        "mediumReps": "15",
+        "eCol": "BLUE",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "13",
         "name": "Core stabil",
-        "medRep": "10",
-        "color": "yellow"
+        "mediumReps": "10",
+        "eCol": "YELLOW",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "14",
         "name": "Bow extend.",
-        "medRep": "10",
-        "color": "blue"
+        "mediumReps": "10",
+        "eCol": "BLUE",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "15",
         "name": "Bike",
-        "medRep": "15",
-        "color": "blue"
+        "mediumReps": "15",
+        "eCol": "BLUE",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "16",
         "name": "Squads",
-        "medRep": "15",
-        "color": "red"
+        "mediumReps": "15",
+        "eCol": "RED",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     },
     {
     	"index": "17",
         "name": "Butterfly",
-        "medRep": "12",
-        "color": "cyan"
+        "mediumReps": "12",
+        "eCol": "CYAN",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     }
 ]
