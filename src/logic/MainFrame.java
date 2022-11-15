@@ -22,6 +22,7 @@ import java.awt.Dimension;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -222,12 +223,14 @@ public class MainFrame extends JFrame {
 
 		// Image
 		labelImage = new JLabel(" ");
-//		labelImage.setBounds(20, 20, 172, 158);
-//		File pathToFile = new File("C:\\Adrian\\3_Selfmade\\5_Programme\\_1 Java\\alul\\src\\database\\MusikPng.png");
-//		Image image = ImageIO.read(pathToFile);
-//		Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-//		ImageIcon icon = new ImageIcon(dimg);
-//		labelImage.setIcon(icon);
+		// labelImage.setBounds(20, 20, 172, 158);
+		// File pathToFile = new File("C:\\Adrian\\3_Selfmade\\5_Programme\\_1
+		// Java\\alul\\src\\database\\MusikPng.png");
+		// Image image = ImageIO.read(pathToFile);
+		// Image dimg = image.getScaledInstance(labelImage.getWidth(),
+		// labelImage.getHeight(), Image.SCALE_SMOOTH);
+		// ImageIcon icon = new ImageIcon(dimg);
+		// labelImage.setIcon(icon);
 		panelMenu2.add(labelImage);
 
 		panelContent = new JPanel();
@@ -1046,7 +1049,11 @@ public class MainFrame extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				if (radioUser0.isSelected() && Main.getUserFlag() == 0) {
 					Main.lines = TextToObject.getLinesFromFile();
-					Main.workouts = TextToObject.getDaysFromLines(Main.lines);
+					try {
+						Main.workouts = TextToObject.getDaysFromLines(Main.lines);
+					} catch (FileNotFoundException e1) {
+						e1.printStackTrace();
+					}
 					Main.refreshContent();
 
 					// refreshes page
@@ -1061,31 +1068,39 @@ public class MainFrame extends JFrame {
 				if (radioUser0.isSelected() && Main.getUserFlag() != 0) {
 					Main.setUserFlag(0);
 					Main.lines = TextToObject.getLinesFromFile();
-					Main.workouts = TextToObject.getDaysFromLines(Main.lines);
+					try {
+						Main.workouts = TextToObject.getDaysFromLines(Main.lines);
+					} catch (FileNotFoundException e2) {
+						e2.printStackTrace();
+					}
 					Main.refreshContent();
 
 					exercisePics = new File[Day.getMaxExercises()];
 					for (int i = 0; i < 18; i++) {
 						exercisePics[i] = new File(Main.workouts.get(0).getExercises()[i].getPicPath());
 					}
-					buttonExc1.setText(" " + ExerciseManager.getName(0));
-					buttonExc2.setText(" " + ExerciseManager.getName(1));
-					buttonExec3.setText(" " + ExerciseManager.getName(2));
-					buttonExec4.setText(" " + ExerciseManager.getName(3));
-					buttonExec5.setText(" " + ExerciseManager.getName(4));
-					buttonExec6.setText(" " + ExerciseManager.getName(5));
-					buttonExec7.setText(" " + ExerciseManager.getName(6));
-					buttonExec8.setText(" " + ExerciseManager.getName(7));
-					buttonExec9.setText(" " + ExerciseManager.getName(8));
-					buttonExec10.setText(" " + ExerciseManager.getName(9));
-					buttonExec11.setText(" " + ExerciseManager.getName(10));
-					buttonExec12.setText(" " + ExerciseManager.getName(11));
-					buttonExec13.setText(" " + ExerciseManager.getName(12));
-					buttonExec14.setText(" " + ExerciseManager.getName(13));
-					buttonExec15.setText(" " + ExerciseManager.getName(14));
-					buttonExec16.setText(" " + ExerciseManager.getName(15));
-					buttonExec17.setText(" " + ExerciseManager.getName(16));
-					buttonExec18.setText(" " + ExerciseManager.getName(17));
+					try {
+						buttonExc1.setText(" " + ExerciseManager.getName(0));
+						buttonExc2.setText(" " + ExerciseManager.getName(1));
+						buttonExec3.setText(" " + ExerciseManager.getName(2));
+						buttonExec4.setText(" " + ExerciseManager.getName(3));
+						buttonExec5.setText(" " + ExerciseManager.getName(4));
+						buttonExec6.setText(" " + ExerciseManager.getName(5));
+						buttonExec7.setText(" " + ExerciseManager.getName(6));
+						buttonExec8.setText(" " + ExerciseManager.getName(7));
+						buttonExec9.setText(" " + ExerciseManager.getName(8));
+						buttonExec10.setText(" " + ExerciseManager.getName(9));
+						buttonExec11.setText(" " + ExerciseManager.getName(10));
+						buttonExec12.setText(" " + ExerciseManager.getName(11));
+						buttonExec13.setText(" " + ExerciseManager.getName(12));
+						buttonExec14.setText(" " + ExerciseManager.getName(13));
+						buttonExec15.setText(" " + ExerciseManager.getName(14));
+						buttonExec16.setText(" " + ExerciseManager.getName(15));
+						buttonExec17.setText(" " + ExerciseManager.getName(16));
+						buttonExec18.setText(" " + ExerciseManager.getName(17));
+					} catch (FileNotFoundException e1) {
+						e1.printStackTrace();
+					}
 
 					// refreshes page
 					contentPane.validate();
@@ -1103,7 +1118,11 @@ public class MainFrame extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				if (radioUser1.isSelected() && Main.getUserFlag() == 1) {
 					Main.lines = TextToObject.getLinesFromFile();
-					Main.workouts = TextToObject.getDaysFromLines(Main.lines);
+					try {
+						Main.workouts = TextToObject.getDaysFromLines(Main.lines);
+					} catch (FileNotFoundException e1) {
+						e1.printStackTrace();
+					}
 					Main.refreshContent();
 
 					// refreshes page
@@ -1117,31 +1136,39 @@ public class MainFrame extends JFrame {
 				if (radioUser1.isSelected() && Main.getUserFlag() != 1) {
 					Main.setUserFlag(1);
 					Main.lines = TextToObject.getLinesFromFile();
-					Main.workouts = TextToObject.getDaysFromLines(Main.lines);
+					try {
+						Main.workouts = TextToObject.getDaysFromLines(Main.lines);
+					} catch (FileNotFoundException e2) {
+						e2.printStackTrace();
+					}
 					Main.refreshContent();
 
 					exercisePics = new File[Day.getMaxExercises()];
 					for (int i = 0; i < 18; i++) {
 						exercisePics[i] = new File(Main.workouts.get(0).getExercises()[i].getPicPath());
 					}
-					buttonExc1.setText(" " + ExerciseManager.getName(0));
-					buttonExc2.setText(" " + ExerciseManager.getName(1));
-					buttonExec3.setText(" " + ExerciseManager.getName(2));
-					buttonExec4.setText(" " + ExerciseManager.getName(3));
-					buttonExec5.setText(" " + ExerciseManager.getName(4));
-					buttonExec6.setText(" " + ExerciseManager.getName(5));
-					buttonExec7.setText(" " + ExerciseManager.getName(6));
-					buttonExec8.setText(" " + ExerciseManager.getName(7));
-					buttonExec9.setText(" " + ExerciseManager.getName(8));
-					buttonExec10.setText(" " + ExerciseManager.getName(9));
-					buttonExec11.setText(" " + ExerciseManager.getName(10));
-					buttonExec12.setText(" " + ExerciseManager.getName(11));
-					buttonExec13.setText(" " + ExerciseManager.getName(12));
-					buttonExec14.setText(" " + ExerciseManager.getName(13));
-					buttonExec15.setText(" " + ExerciseManager.getName(14));
-					buttonExec16.setText(" " + ExerciseManager.getName(15));
-					buttonExec17.setText(" " + ExerciseManager.getName(16));
-					buttonExec18.setText(" " + ExerciseManager.getName(17));
+					try {
+						buttonExc1.setText(" " + ExerciseManager.getName(0));
+						buttonExc2.setText(" " + ExerciseManager.getName(1));
+						buttonExec3.setText(" " + ExerciseManager.getName(2));
+						buttonExec4.setText(" " + ExerciseManager.getName(3));
+						buttonExec5.setText(" " + ExerciseManager.getName(4));
+						buttonExec6.setText(" " + ExerciseManager.getName(5));
+						buttonExec7.setText(" " + ExerciseManager.getName(6));
+						buttonExec8.setText(" " + ExerciseManager.getName(7));
+						buttonExec9.setText(" " + ExerciseManager.getName(8));
+						buttonExec10.setText(" " + ExerciseManager.getName(9));
+						buttonExec11.setText(" " + ExerciseManager.getName(10));
+						buttonExec12.setText(" " + ExerciseManager.getName(11));
+						buttonExec13.setText(" " + ExerciseManager.getName(12));
+						buttonExec14.setText(" " + ExerciseManager.getName(13));
+						buttonExec15.setText(" " + ExerciseManager.getName(14));
+						buttonExec16.setText(" " + ExerciseManager.getName(15));
+						buttonExec17.setText(" " + ExerciseManager.getName(16));
+						buttonExec18.setText(" " + ExerciseManager.getName(17));
+					} catch (FileNotFoundException e1) {
+						e1.printStackTrace();
+					}
 
 					// refreshes page
 					contentPane.validate();

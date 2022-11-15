@@ -1,5 +1,6 @@
 package database;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -57,8 +58,9 @@ public class TextToObject {
 	 *              </pre>
 	 * 
 	 * @return List of recognized day objects
+	 * @throws FileNotFoundException
 	 */
-	public static List<Day> getDaysFromLines(List<String> lines) {
+	public static List<Day> getDaysFromLines(List<String> lines) throws FileNotFoundException {
 		allDays = new ArrayList<Day>();
 		for (int i = 0; i < lines.size(); i++) {
 			if (((lines.get(i).substring(0, 2).equals("20")) || (lines.get(i).substring(0, 2).equals("21")))

@@ -1,5 +1,6 @@
 package logic;
 
+import java.io.FileNotFoundException;
 import java.time.LocalDate;
 
 public class Day {
@@ -11,8 +12,9 @@ public class Day {
 
 	/**
 	 * Creates a new Day with 20.05.2022 as the date
+	 * @throws FileNotFoundException
 	 */
-	public Day() {
+	public Day() throws FileNotFoundException {
 		this.date = LocalDate.now();
 		this.exercises = new Exercise[maxExercises];
 		for (int i = 0; i < maxExercises; i++) {

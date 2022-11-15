@@ -2,6 +2,7 @@ package logic;
 
 import java.awt.EventQueue;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import database.TextToObject;
@@ -39,6 +40,7 @@ public class Main {
 		// Initialize objects=======================================================|
 		lines = TextToObject.getLinesFromFile();
 		workouts = TextToObject.getDaysFromLines(lines);
+		exercises = new ArrayList<Exercise>();
 		refreshContent();
 
 		// Start GUI================================================================|
