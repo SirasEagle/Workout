@@ -1,5 +1,9 @@
 package logic;
 
+import java.io.FileNotFoundException;
+
+import Design.eColor;
+
 /**
  * This class creates object of the type "Exercise". <br>
  * 
@@ -8,16 +12,17 @@ package logic;
  */
 public class Exercise {
 
+	private int index;
 	private String name;
 	private String picPath;
 	private int mediumReps;
-	private int index;
 	private float fColor;
+	private eColor eCol;
 	public int set1;
 	public int set2;
 	public int set3;
 
-	public Exercise(int index) {
+	public Exercise(int index) throws FileNotFoundException {
 		this.index = index;
 		this.picPath = ExerciseManager.getPicPath(index);
 		this.name = ExerciseManager.getName(index);
