@@ -1,34 +1,7 @@
 [
     {
     	"index": "0",
-        "name": "Crunches",
-        "mediumReps": "15",
-        "eCol": "BLUE",
-        "set1": "0",
-        "set2": "0",
-        "set3": "0"
-    },
-    {
-    	"index": "1",
-        "name": "Peeing Dog",
-        "mediumReps": "9",
-        "eCol": "RED",
-        "set1": "0",
-        "set2": "0",
-        "set3": "0"
-    },
-    {
-    	"index": "2",
-        "name": "Scissors",
-        "mediumReps": "25",
-        "eCol": "RED",
-        "set1": "0",
-        "set2": "0",
-        "set3": "0"
-    },
-    {
-    	"index": "3",
-        "name": "Crocodile",
+        "name": "Kniebeuge",
         "mediumReps": "20",
         "eCol": "RED",
         "set1": "0",
@@ -36,27 +9,54 @@
         "set3": "0"
     },
     {
+    	"index": "1",
+        "name": "Chin-ups",
+        "mediumReps": "3",
+        "eCol": "ORANGE",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
+    },
+    {
+    	"index": "2",
+        "name": "Pull-up half",
+        "mediumReps": "11",
+        "eCol": "ORANGE",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
+    },
+    {
+    	"index": "3",
+        "name": "Pull-close",
+        "mediumReps": "11",
+        "eCol": "ORANGE",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
+    },
+    {
     	"index": "4",
-        "name": "SitUps",
-        "mediumReps": "9",
-        "eCol": "BLUE",
+        "name": "Bow down",
+        "mediumReps": "20",
+        "eCol": "ORANGE",
         "set1": "0",
         "set2": "0",
         "set3": "0"
     },
     {
     	"index": "5",
-        "name": "Ankle touch",
-        "mediumReps": "10",
-        "eCol": "BLUE",
+        "name": "Pull-close L",
+        "mediumReps": "15",
+        "eCol": "ORANGE",
         "set1": "0",
         "set2": "0",
         "set3": "0"
     },
     {
     	"index": "6",
-        "name": "Poopin Dog",
-        "mediumReps": "8",
+        "name": "Chin-ups L",
+        "mediumReps": "10",
         "eCol": "ORANGE",
         "set1": "0",
         "set2": "0",
@@ -64,8 +64,8 @@
     },
     {
     	"index": "7",
-        "name": "Bridges",
-        "mediumReps": "12",
+        "name": "Pull-ups",
+        "mediumReps": "4",
         "eCol": "ORANGE",
         "set1": "0",
         "set2": "0",
@@ -73,53 +73,53 @@
     },
     {
     	"index": "8",
-        "name": "Biceps Curls",
-        "mediumReps": "12",
-        "eCol": "PINK",
+        "name": "Triceps",
+        "mediumReps": "15",
+        "eCol": "GREEN",
         "set1": "0",
         "set2": "0",
         "set3": "0"
     },
     {
     	"index": "9",
-        "name": "Pull-close L",
-        "mediumReps": "9",
-        "eCol": "PINK",
+        "name": "Push-ups",
+        "mediumReps": "15",
+        "eCol": "GREEN",
         "set1": "0",
         "set2": "0",
         "set3": "0"
     },
     {
     	"index": "10",
-        "name": "Leg Raise",
-        "mediumReps": "7",
-        "eCol": "BLUE",
+        "name": "Butterfly",
+        "mediumReps": "20",
+        "eCol": "GREEN",
         "set1": "0",
         "set2": "0",
         "set3": "0"
     },
     {
     	"index": "11",
-        "name": "Shoulder",
-        "mediumReps": "5",
-        "eCol": "YELLOW",
+        "name": "Hammer-Curls",
+        "mediumReps": "16",
+        "eCol": "PINK",
         "set1": "0",
         "set2": "0",
         "set3": "0"
     },
     {
     	"index": "12",
-        "name": "Side bend",
-        "mediumReps": "15",
-        "eCol": "BLUE",
+        "name": "Shoulder",
+        "mediumReps": "12",
+        "eCol": "CYAN",
         "set1": "0",
         "set2": "0",
         "set3": "0"
     },
     {
     	"index": "13",
-        "name": "Core stabil",
-        "mediumReps": "10",
+        "name": "Low back",
+        "mediumReps": "20",
         "eCol": "YELLOW",
         "set1": "0",
         "set2": "0",
@@ -127,8 +127,8 @@
     },
     {
     	"index": "14",
-        "name": "Bow extend.",
-        "mediumReps": "10",
+        "name": "Bike",
+        "mediumReps": "20",
         "eCol": "BLUE",
         "set1": "0",
         "set2": "0",
@@ -136,7 +136,7 @@
     },
     {
     	"index": "15",
-        "name": "Bike",
+        "name": "Sit-ups",
         "mediumReps": "15",
         "eCol": "BLUE",
         "set1": "0",
@@ -145,18 +145,18 @@
     },
     {
     	"index": "16",
-        "name": "Squads",
+        "name": "B-Curls",
         "mediumReps": "15",
-        "eCol": "RED",
+        "eCol": "PINK",
         "set1": "0",
         "set2": "0",
         "set3": "0"
     },
     {
     	"index": "17",
-        "name": "Butterfly",
-        "mediumReps": "12",
-        "eCol": "CYAN",
+        "name": "Rev-Curls",
+        "mediumReps": "14",
+        "eCol": "PINK",
         "set1": "0",
         "set2": "0",
         "set3": "0"
