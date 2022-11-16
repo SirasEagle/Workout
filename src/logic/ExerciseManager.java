@@ -14,7 +14,8 @@ import com.google.gson.JsonParser;
 
 public class ExerciseManager {
 
-	private static String path = "C:\\Adrian\\3_Selfmade\\5_Programme\\_1 Java\\alul\\src\\database\\";
+	// private static String pathAbsolute = "C:\\Adrian\\3_Selfmade\\5_Programme\\_1 Java\\alul\\src\\database\\";
+	private static String pathRelative = "src\\database\\";
 
 	/**
 	 * Chooses a user specific image for the exercise, identifiable by the index
@@ -26,123 +27,9 @@ public class ExerciseManager {
 		String ret = "";
 
 		if (Main.getUserFlag() == 0) {
-			switch (exeIndex) {
-				case 0:
-					ret = path + "1.jpg";
-					break;
-				case 1:
-					ret = path + "2.jpg";
-					break;
-				case 2:
-					ret = path + "3.jpg";
-					break;
-				case 3:
-					ret = path + "4.jpg";
-					break;
-				case 4:
-					ret = path + "5.jpg";
-					break;
-				case 5:
-					ret = path + "6.jpg";
-					break;
-				case 6:
-					ret = path + "7.jpg";
-					break;
-				case 7:
-					ret = path + "8.jpg";
-					break;
-				case 8:
-					ret = path + "9.jpg";
-					break;
-				case 9:
-					ret = path + "10.jpg";
-					break;
-				case 10:
-					ret = path + "11.jpg";
-					break;
-				case 11:
-					ret = path + "12.jpg";
-					break;
-				case 12:
-					ret = path + "13.jpg";
-					break;
-				case 13:
-					ret = path + "14.jpg";
-					break;
-				case 14:
-					ret = path + "15.jpg";
-					break;
-				case 15:
-					ret = path + "16.jpg";
-					break;
-				case 16:
-					ret = path + "17.jpg";
-					break;
-				case 17:
-					ret = path + "18.jpg";
-					break;
-				default:
-					break;
-			}
+			ret = pathRelative + "user0exer\\" + (exeIndex + 1) + ".jpg";
 		} else if (Main.getUserFlag() == 1) {
-			switch (exeIndex) {
-				case 0:
-					ret = path + "user1exer\\1.jpg";
-					break;
-				case 1:
-					ret = path + "user1exer\\2.jpg";
-					break;
-				case 2:
-					ret = path + "user1exer\\3.jpg";
-					break;
-				case 3:
-					ret = path + "user1exer\\4.jpg";
-					break;
-				case 4:
-					ret = path + "user1exer\\5.jpg";
-					break;
-				case 5:
-					ret = path + "user1exer\\6.jpg";
-					break;
-				case 6:
-					ret = path + "user1exer\\7.jpg";
-					break;
-				case 7:
-					ret = path + "user1exer\\8.jpg";
-					break;
-				case 8:
-					ret = path + "user1exer\\9.jpg";
-					break;
-				case 9:
-					ret = path + "user1exer\\10.jpg";
-					break;
-				case 10:
-					ret = path + "user1exer\\11.jpg";
-					break;
-				case 11:
-					ret = path + "user1exer\\12.jpg";
-					break;
-				case 12:
-					ret = path + "user1exer\\13.jpg";
-					break;
-				case 13:
-					ret = path + "user1exer\\14.jpg";
-					break;
-				case 14:
-					ret = path + "user1exer\\15.jpg";
-					break;
-				case 15:
-					ret = path + "user1exer\\16.jpg";
-					break;
-				case 16:
-					ret = path + "user1exer\\17.jpg";
-					break;
-				case 17:
-					ret = path + "user1exer\\18.jpg";
-					break;
-				default:
-					break;
-			}
+			ret = pathRelative + "user1exer\\" + (exeIndex + 1) + ".jpg";
 		}
 
 		return ret;
@@ -253,8 +140,10 @@ public class ExerciseManager {
 		if (Main.exercises != null) {
 			Main.exercises.clear();
 		}
+		// BufferedReader reader = new BufferedReader(new FileReader(
+		// pathAbsolute + "user" + user + "exer\\definition.txt"));
 		BufferedReader reader = new BufferedReader(new FileReader(
-				path + "user" + user + "exer\\definition.txt"));
+				pathRelative + "user" + user + "exer\\definition.txt"));
 		String jsonString = "";
 		String line = "";
 		try {
