@@ -159,75 +159,14 @@ public class ExerciseManager {
 	protected static int getMedRep(int exeIndex) throws FileNotFoundException {
 		int ret = 0;
 
-		if (Main.getUserFlag() == 0) {
-			switch (exeIndex) {
-				case 0:
-					ret = 20;
-					break;
-				case 1:
-					ret = 3;
-					break;
-				case 2:
-					ret = 11;
-					break;
-				case 3:
-					ret = 11;
-					break;
-				case 4:
-					ret = 20;
-					break;
-				case 5:
-					ret = 15;
-					break;
-				case 6:
-					ret = 10;
-					break;
-				case 7:
-					ret = 4;
-					break;
-				case 8:
-					ret = 15;
-					break;
-				case 9:
-					ret = 15;
-					break;
-				case 10:
-					ret = 20;
-					break;
-				case 11:
-					ret = 16;
-					break;
-				case 12:
-					ret = 12;
-					break;
-				case 13:
-					ret = 20;
-					break;
-				case 14:
-					ret = 20;
-					break;
-				case 15:
-					ret = 15;
-					break;
-				case 16:
-					ret = 15;
-					break;
-				case 17:
-					ret = 14;
-					break;
-				default:
-					break;
-			}
-		} else if (Main.getUserFlag() == 1) {
-
-			if (Main.exercises == null) {
-				ExerciseManager.fillExercises();
-			}
-			if (Main.exercises.size() <= exeIndex) {
-				ExerciseManager.fillExercises();
-			}
-			ret = Main.exercises.get(exeIndex).getMediumReps();
+		if (Main.exercises == null) {
+			ExerciseManager.updateExercises(Main.getUserFlag());
 		}
+		if (Main.exercises.size() <= exeIndex) {
+			ExerciseManager.updateExercises(Main.getUserFlag());
+		}
+		ret = Main.exercises.get(exeIndex).getMediumReps();
+
 		return ret;
 	}
 
@@ -247,76 +186,14 @@ public class ExerciseManager {
 	public static float getExeColor(int index) throws FileNotFoundException {
 		float fColor = 0f;
 
-		if (Main.getUserFlag() == 0) {
-			switch (index) {
-				case 0:
-					fColor = Colors.exRed();
-					break;
-				case 1:
-					fColor = Colors.exOrange();
-					break;
-				case 2:
-					fColor = Colors.exOrange();
-					break;
-				case 3:
-					fColor = Colors.exOrange();
-					break;
-				case 4:
-					fColor = Colors.exOrange();
-					break;
-				case 5:
-					fColor = Colors.exOrange();
-					break;
-				case 6:
-					fColor = Colors.exOrange();
-					break;
-				case 7:
-					fColor = Colors.exOrange();
-					break;
-				case 8:
-					fColor = Colors.exGreen();
-					break;
-				case 9:
-					fColor = Colors.exGreen();
-					break;
-				case 10:
-					fColor = Colors.exGreen();
-					break;
-				case 11:
-					fColor = Colors.exPink();
-					break;
-				case 12:
-					fColor = Colors.exCyan();
-					break;
-				case 13:
-					fColor = Colors.exYellow();
-					break;
-				case 14:
-					fColor = Colors.exBlue();
-					break;
-				case 15:
-					fColor = Colors.exBlue();
-					break;
-				case 16:
-					fColor = Colors.exPink();
-					break;
-				case 17:
-					fColor = Colors.exPink();
-					break;
-				default:
-					break;
-			}
-		} else if (Main.getUserFlag() == 1) {
-
-			if (Main.exercises == null) {
-				ExerciseManager.fillExercises();
-			}
-			if (Main.exercises.size() <= index) {
-				ExerciseManager.fillExercises();
-			}
-			eColor e = Main.exercises.get(index).getEColor();
-			fColor = ExerciseManager.getColorAsFloat(e);
+		if (Main.exercises == null) {
+			ExerciseManager.updateExercises(Main.getUserFlag());
 		}
+		if (Main.exercises.size() <= index) {
+			ExerciseManager.updateExercises(Main.getUserFlag());
+		}
+		eColor e = Main.exercises.get(index).getEColor();
+		fColor = ExerciseManager.getColorAsFloat(e);
 		return fColor;
 	}
 
@@ -329,75 +206,14 @@ public class ExerciseManager {
 	public static String getName(int exeIndex) throws FileNotFoundException {
 		String ret = "";
 
-		if (Main.getUserFlag() == 0) {
-			switch (exeIndex) {
-				case 0:
-					ret = "Kniebeuge";
-					break;
-				case 1:
-					ret = "Chin-ups";
-					break;
-				case 2:
-					ret = "Pull-up half";
-					break;
-				case 3:
-					ret = "Pull-close";
-					break;
-				case 4:
-					ret = "Bow down";
-					break;
-				case 5:
-					ret = "Pull-close L";
-					break;
-				case 6:
-					ret = "Chin-ups L";
-					break;
-				case 7:
-					ret = "Pull-ups";
-					break;
-				case 8:
-					ret = "Triceps";
-					break;
-				case 9:
-					ret = "Push-ups";
-					break;
-				case 10:
-					ret = "Butterfly";
-					break;
-				case 11:
-					ret = "Hammer-Curls";
-					break;
-				case 12:
-					ret = "Shoulder";
-					break;
-				case 13:
-					ret = "Low back";
-					break;
-				case 14:
-					ret = "Bike";
-					break;
-				case 15:
-					ret = "Sit-ups";
-					break;
-				case 16:
-					ret = "B-Curls";
-					break;
-				case 17:
-					ret = "Rev-Curls";
-					break;
-				default:
-					break;
-			}
-		} else if (Main.getUserFlag() == 1) {
-
-			if (Main.exercises == null) {
-				ExerciseManager.fillExercises();
-			}
-			if (Main.exercises.size() <= exeIndex) {
-				ExerciseManager.fillExercises();
-			}
-			ret = Main.exercises.get(exeIndex).getName();
+		if (Main.exercises == null) {
+			ExerciseManager.updateExercises(Main.getUserFlag());
 		}
+		if (Main.exercises.size() <= exeIndex) {
+			ExerciseManager.updateExercises(Main.getUserFlag());
+		}
+		ret = Main.exercises.get(exeIndex).getName();
+
 		return ret;
 	}
 
@@ -432,10 +248,13 @@ public class ExerciseManager {
 		return ret;
 	}
 
-	private static void fillExercises() throws FileNotFoundException {
+	protected static void updateExercises(int user) throws FileNotFoundException {
 
+		if (Main.exercises != null) {
+			Main.exercises.clear();
+		}
 		BufferedReader reader = new BufferedReader(new FileReader(
-				path + "user1exer\\definition.txt"));
+				path + "user" + user + "exer\\definition.txt"));
 		String jsonString = "";
 		String line = "";
 		try {

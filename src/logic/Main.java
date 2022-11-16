@@ -1,6 +1,7 @@
 package logic;
 
 import java.awt.EventQueue;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,9 +39,9 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 
 		// Initialize objects=======================================================|
+		exercises = new ArrayList<Exercise>();
 		lines = TextToObject.getLinesFromFile();
 		workouts = TextToObject.getDaysFromLines(lines);
-		exercises = new ArrayList<Exercise>();
 		refreshContent();
 
 		// Start GUI================================================================|
@@ -82,6 +83,11 @@ public class Main {
 	}
 
 	public static void refreshContent() {
+		try {
+			ExerciseManager.updateExercises(userFlag);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		int tableWidth = 6;
 		if (workouts.size() < 6) {
 			tableWidth = workouts.size();
