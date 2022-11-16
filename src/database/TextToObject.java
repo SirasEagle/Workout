@@ -23,22 +23,13 @@ public class TextToObject {
 	 */
 	public static List<String> getLinesFromFile() {
 		List<String> allLines = null;
-		if (Main.getUserFlag() == 0) {
-			try {
-//				System.out.println(Paths.get("src\\database").toAbsolutePath().resolve("exercises.txt").toString());
-				allLines = Files.readAllLines(Paths.get("src\\database").toAbsolutePath().resolve("exercises.txt"),
-						StandardCharsets.UTF_8);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}	
-		} else if (Main.getUserFlag() == 1) {
-			try {
-//				System.out.println(Paths.get("src\\database").toAbsolutePath().resolve("exercises2.txt").toString());
-				allLines = Files.readAllLines(Paths.get("src\\database").toAbsolutePath().resolve("exercises2.txt"),
-						StandardCharsets.UTF_8);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+		try {
+			allLines = Files.readAllLines(
+					Paths.get("src\\database\\user" + Main.getUserFlag() + "exer").toAbsolutePath()
+							.resolve("exercises.txt"),
+					StandardCharsets.UTF_8);
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		return allLines;
 	}
