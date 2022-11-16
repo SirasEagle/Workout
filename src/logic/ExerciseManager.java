@@ -7,6 +7,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Comparator;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -14,7 +16,8 @@ import com.google.gson.JsonParser;
 
 public class ExerciseManager {
 
-	// private static String pathAbsolute = "C:\\Adrian\\3_Selfmade\\5_Programme\\_1 Java\\alul\\src\\database\\";
+	// private static String pathAbsolute = "C:\\Adrian\\3_Selfmade\\5_Programme\\_1
+	// Java\\alul\\src\\database\\";
 	private static String pathRelative = "src\\database\\";
 
 	/**
@@ -179,6 +182,18 @@ public class ExerciseManager {
 		// the json String
 		JsonArray object = (JsonArray) parser.parse(jsonString);// response will be the json String
 		Exercise[] emp = gson.fromJson(object, Exercise[].class);
+
+		// sort the array from smallest to largest
+		Arrays.sort(emp, new Comparator<Exercise>() {
+			public int compare(Exercise b1, Exercise b2) {
+				if (b1.getIndex() > b2.getIndex()) {
+					return 1;
+				} else {
+					return -1;
+				}
+			}
+		});
+
 		for (int i = 0; i < emp.length; i++) {
 			Main.exercises.add(emp[i]);
 		}

@@ -1,6 +1,7 @@
 package logic;
 
 import java.io.FileNotFoundException;
+import java.util.Comparator;
 
 import Design.eColor;
 
@@ -10,7 +11,7 @@ import Design.eColor;
  * @author Adrian Leutert
  *
  */
-public class Exercise {
+public class Exercise implements Comparable<Exercise> {
 
 	private int index;
 	private String name;
@@ -63,5 +64,10 @@ public class Exercise {
 	
 	public int getIndex() {
 		return index;
+	}
+
+	@Override
+	public int compareTo(Exercise o) {
+		return Comparator.comparing(Exercise::getIndex).thenComparing(Exercise::getIndex).compare(this, o);
 	}
 }
