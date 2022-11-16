@@ -72,7 +72,7 @@
         "set3": "0"
     },
     {
-    	"index": "8",
+    	"index": "11",
         "name": "Triceps",
         "mediumReps": "15",
         "eCol": "GREEN",
@@ -99,7 +99,7 @@
         "set3": "0"
     },
     {
-    	"index": "11",
+    	"index": "15",
         "name": "Hammer-Curls",
         "mediumReps": "16",
         "eCol": "PINK",
@@ -117,7 +117,7 @@
         "set3": "0"
     },
     {
-    	"index": "13",
+    	"index": "8",
         "name": "Low back",
         "mediumReps": "20",
         "eCol": "YELLOW",
@@ -135,7 +135,7 @@
         "set3": "0"
     },
     {
-    	"index": "15",
+    	"index": "13",
         "name": "Sit-ups",
         "mediumReps": "15",
         "eCol": "BLUE",
