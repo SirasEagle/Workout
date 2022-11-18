@@ -46,7 +46,7 @@
     },
     {
     	"index": "5",
-        "name": "Ankle touch",
+        "name": "Toe touch",
         "mediumReps": "10",
         "eCol": "BLUE",
         "set1": "0",
