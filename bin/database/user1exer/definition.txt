@@ -1,6 +1,6 @@
 [
     {
-    	"index": "0",
+    	"index": "17",
         "name": "Crunches",
         "mediumReps": "15",
         "eCol": "BLUE",
@@ -46,7 +46,7 @@
     },
     {
     	"index": "5",
-        "name": "Ankle touch",
+        "name": "Toe touch",
         "mediumReps": "10",
         "eCol": "BLUE",
         "set1": "0",
@@ -90,7 +90,7 @@
         "set3": "0"
     },
     {
-    	"index": "10",
+    	"index": "16",
         "name": "Leg Raise",
         "mediumReps": "7",
         "eCol": "BLUE",
@@ -144,7 +144,7 @@
         "set3": "0"
     },
     {
-    	"index": "16",
+    	"index": "0",
         "name": "Squads",
         "mediumReps": "15",
         "eCol": "RED",
@@ -153,7 +153,7 @@
         "set3": "0"
     },
     {
-    	"index": "17",
+    	"index": "10",
         "name": "Butterfly",
         "mediumReps": "12",
         "eCol": "CYAN",
