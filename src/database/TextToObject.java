@@ -63,7 +63,7 @@ public class TextToObject {
 				while (true) {
 					if ((lines.get(i + cracra) != null) && (lines.get(i + cracra).charAt(0) != '-')) {
 						String[] exercises = lines.get(i + cracra).split("-");
-						int exIndex = Integer.parseInt(exercises[0]);
+						int exIndex = Integer.parseInt(exercises[0].substring(1));
 						int round1 = Integer.parseInt(exercises[1]);
 						int round2 = Integer.parseInt(exercises[2]);
 						int round3 = Integer.parseInt(exercises[3]);
