@@ -1,18 +1,18 @@
 2022-08-20
 e4-25-0-0
-e8-20-10-0
-e6-10-15-0
+e6-20-10-0
+e15-10-15-0
 e18-10-0-0
-e5-10-0-0
+e14-10-0-0
 e2-11-0-0
-e7-10-0-0
-e12-8-0-0-(2M)
+e5-10-0-0
+e8-8-0-0-(2M)
 e9-10-0-0-(2M)
 e10-10-8-0-orange
 --
 2022-08-28
 e4-20-20-20
-e12-7-7-7
+e8-7-7-7
 e9-7-7-7
 e10-10-0-0
 e3-30-30-30- Und 10 mal Bow Down
@@ -21,12 +21,11 @@ e3-30-30-30- Und 10 mal Bow Down
 e4-25-0-0
 e3-15-15-0
 e18-20-20-0
-e5-18-10-0
-e6-15-0-0
-e7-15-0-0
-e13-15-15-0
-e14-10-0-0
+e14-18-10-0
 e15-15-0-0
+e5-15-0-0
+e13-15-15-0
+e7-10-0-0-Bow Extend:-15-0-0
 e16-15-0-0
 e1-10-10-0
 --
@@ -37,7 +36,7 @@ e1-15-15-5
 2022-10-30
 e4-25-25-0
 e3-40-0-0
-e7-30-0-0
+e5-30-0-0
 e10-15-0-0
 e1-15-15-20
 e18-20-18-16
@@ -46,44 +45,45 @@ e17-15-0-0
 2022-11-03
 e9-20-20-0
 e1-23-15-0
-e8-20-20-0
-e5-15-0-0
-e6-30-0-0
+e6-20-20-0
+e14-15-0-0
+e15-30-0-0
 e2-20-0-0
-e12-20-0-0
+e8-20-0-0
 e18-20-0-0
 e17-15-0-0
 e3-50-0-0
-e7-18-0-0
+e5-18-0-0
 --
 2022-11-05
 e4-30-0-0
 e18-15-10-10
-e7-20-0-0
-e8-20-20-0
+e5-20-0-0
+e6-20-20-0
 e9-8-0-0
 e1-15-0-0
 --
 2022-11-06
-e5-13-0-0
+e14-13-0-0
 e18-10-10-0
 e17-10-0-0
-e8-25-10-0
+e6-25-10-0
 e4-25-15-0
 e16-30-0-0-10 x inner thigh lifts, 10 birddogs☺
 e9-10-0-0
 e11-18-0-0
-e12-10-0-0
+e8-10-0-0
 --
 2022-11-08
 e1-15-0-0
-e5-10-0-0- TODO DANCEWORKOUT STATT BOW EXTEND; beinpresse statt core stabil
+e14-10-0-0- TODO: beinpresse statt core stabil
 e18-20-10-0
-e8-10-0-0
-e3-40-0-0- Und ein Danceworkout
+e6-10-0-0
+e3-40-0-0
+e12-1-1-1
 --
 2022-11-14
 e18-10-0-0- Beinpresse: 3*15 (25kg); Oberschenkelvorderseite: 3*10 (10kg); Bauchtrainer: 3*20 (25kg)
-e5-17-6-6- Oberschenkelinnenseite: 3*20 (25kg); Oberschenkelaußenseite: 3*15 (30kg); Gewichtheben für Beine und Po: 3*7 (12kg)
-e7-15-15-10- Butterfly: 1*15 (15kg); Butterfly: 2*15 (10kg); Latziehen: 3*15 (15kg); 9Min und 1,34km auf Crosstrainer
+e14-17-6-6- Oberschenkelinnenseite: 3*20 (25kg); Oberschenkelaußenseite: 3*15 (30kg); Gewichtheben für Beine und Po: 3*7 (12kg)
+e5-15-15-10- Butterfly: 1*15 (15kg); Butterfly: 2*15 (10kg); Latziehen: 3*15 (15kg); 9Min und 1,34km auf Crosstrainer
 --
