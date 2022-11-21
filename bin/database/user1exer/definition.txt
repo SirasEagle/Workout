@@ -36,7 +36,7 @@
         "set3": "0"
     },
     {
-    	"index": "4",
+    	"index": "13",
         "name": "SitUps",
         "mediumReps": "9",
         "eCol": "BLUE",
@@ -45,7 +45,7 @@
         "set3": "0"
     },
     {
-    	"index": "5",
+    	"index": "14",
         "name": "Toe touch",
         "mediumReps": "10",
         "eCol": "BLUE",
@@ -54,7 +54,7 @@
         "set3": "0"
     },
     {
-    	"index": "6",
+    	"index": "4",
         "name": "Poopin Dog",
         "mediumReps": "8",
         "eCol": "ORANGE",
@@ -63,7 +63,7 @@
         "set3": "0"
     },
     {
-    	"index": "7",
+    	"index": "5",
         "name": "Bridges",
         "mediumReps": "12",
         "eCol": "ORANGE",
@@ -99,7 +99,7 @@
         "set3": "0"
     },
     {
-    	"index": "11",
+    	"index": "7",
         "name": "Shoulder",
         "mediumReps": "5",
         "eCol": "YELLOW",
@@ -117,7 +117,7 @@
         "set3": "0"
     },
     {
-    	"index": "13",
+    	"index": "6",
         "name": "Core stabil",
         "mediumReps": "10",
         "eCol": "YELLOW",
@@ -126,10 +126,10 @@
         "set3": "0"
     },
     {
-    	"index": "14",
-        "name": "Bow extend.",
-        "mediumReps": "10",
-        "eCol": "BLUE",
+    	"index": "11",
+        "name": "Dance-work.",
+        "mediumReps": "1",
+        "eCol": "GREEN",
         "set1": "0",
         "set2": "0",
         "set3": "0"
@@ -157,6 +157,15 @@
         "name": "Butterfly",
         "mediumReps": "12",
         "eCol": "CYAN",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
+    },
+    {
+    	"index": "18",
+        "name": "Bow extend.",
+        "mediumReps": "10",
+        "eCol": "BLUE",
         "set1": "0",
         "set2": "0",
         "set3": "0"
