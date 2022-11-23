@@ -28,16 +28,16 @@ public class Statistics {
 	}
 
 	protected static String getAllValuesAsString() {
-		if (Main.workouts.size() < 1) {
+		if (Main.getWorkouts().size() < 1) {
 			return "Not enough workouts";
 		}
-		String ret = ((Integer) Main.workouts.get(0).getValue()).toString();
-		for (int i = 1; i < Main.workouts.size(); i++) {
+		String ret = ((Integer) Main.getWorkouts().get(0).getValue()).toString();
+		for (int i = 1; i < Main.getWorkouts().size(); i++) {
 			ret += "%, ";
 			if ((i % 10) == 0) {
 				ret += "<br/>";
 			}
-			ret += ((Integer) Main.workouts.get(i).getValue()).toString();
+			ret += ((Integer) Main.getWorkouts().get(i).getValue()).toString();
 		}
 		return ret + "%";
 	}
@@ -58,40 +58,40 @@ public class Statistics {
 		int[] ret = { 0, 0 };
 		if (flag == 0) {
 			int iDepth = MAX_DEPTH;
-			if (Main.workouts.size() < MAX_DEPTH) {
-				iDepth = Main.workouts.size();
+			if (Main.getWorkouts().size() < MAX_DEPTH) {
+				iDepth = Main.getWorkouts().size();
 			}
 			ret[0] = index;
-			for (int i = (Main.workouts.size() - iDepth); i < Main.workouts.size(); i++) {
-				ret[1] += Main.workouts.get(i).getExercises()[index].set1
-						+ Main.workouts.get(i).getExercises()[index].set2
-						+ Main.workouts.get(i).getExercises()[index].set3;
+			for (int i = (Main.getWorkouts().size() - iDepth); i < Main.getWorkouts().size(); i++) {
+				ret[1] += Main.getWorkouts().get(i).getExercises()[index].set1
+						+ Main.getWorkouts().get(i).getExercises()[index].set2
+						+ Main.getWorkouts().get(i).getExercises()[index].set3;
 			}
 			ret[1] = (ret[1] * 100) / iDepth;
-			ret[1] = ret[1] / (Main.workouts.get(0).getExercises()[index].getMediumReps() * 3);
+			ret[1] = ret[1] / (Main.getWorkouts().get(0).getExercises()[index].getMediumReps() * 3);
 		} else if (flag == 1) {
 			int iDepth = MAX_DEPTH_DAYS;
 			int iIndexOfBeginning = 0;
-			LocalDate dDepth = Main.workouts.get((Main.workouts.size() - 1)).getDate().minusDays(iDepth);
-			if (Main.workouts.get(0).getDate().isAfter(dDepth)) {
-				dDepth = Main.workouts.get(0).getDate();
+			LocalDate dDepth = Main.getWorkouts().get((Main.getWorkouts().size() - 1)).getDate().minusDays(iDepth);
+			if (Main.getWorkouts().get(0).getDate().isAfter(dDepth)) {
+				dDepth = Main.getWorkouts().get(0).getDate();
 			} else {
 				while (true) {
-					if (Main.workouts.get(iIndexOfBeginning).getDate().isAfter(dDepth)
-							|| Main.workouts.get(iIndexOfBeginning).getDate().isEqual(dDepth)) {
+					if (Main.getWorkouts().get(iIndexOfBeginning).getDate().isAfter(dDepth)
+							|| Main.getWorkouts().get(iIndexOfBeginning).getDate().isEqual(dDepth)) {
 						break;
 					}
 					iIndexOfBeginning++;
 				}
 			}
 			ret[0] = index;
-			for (int i = iIndexOfBeginning; i < Main.workouts.size(); i++) {
-				ret[1] += Main.workouts.get(i).getExercises()[index].set1
-						+ Main.workouts.get(i).getExercises()[index].set2
-						+ Main.workouts.get(i).getExercises()[index].set3;
+			for (int i = iIndexOfBeginning; i < Main.getWorkouts().size(); i++) {
+				ret[1] += Main.getWorkouts().get(i).getExercises()[index].set1
+						+ Main.getWorkouts().get(i).getExercises()[index].set2
+						+ Main.getWorkouts().get(i).getExercises()[index].set3;
 			}
 			ret[1] = (ret[1] * 100) / (iDepth / 3);
-			ret[1] = ret[1] / (Main.workouts.get(0).getExercises()[index].getMediumReps() * 3);
+			ret[1] = ret[1] / (Main.getWorkouts().get(0).getExercises()[index].getMediumReps() * 3);
 		}
 		return ret;
 	}
@@ -106,7 +106,7 @@ public class Statistics {
 		int num = Day.getMaxExercises();
 		int[][] ret = new int[num][2];
 		for (int i = 0; i < num; i++) {
-			int[] ex = Statistics.getExerciseAverage(flag, Main.workouts.get(0).getExercises()[i], i);
+			int[] ex = Statistics.getExerciseAverage(flag, Main.getWorkouts().get(0).getExercises()[i], i);
 			ret[i][0] = ex[0];
 			ret[i][1] = ex[1];
 		}
@@ -123,8 +123,8 @@ public class Statistics {
 		int[][] ret = new int[num][2];
 		if (type == 0) {
 			for (int i = 0; i < Day.getMaxExercises(); i++) {
-				int[] ex = Statistics.getExerciseAverage(flag, Main.workouts.get(0).getExercises()[i], i);
-				area.append(Main.workouts.get(0).getExercises()[ex[0]].getName());
+				int[] ex = Statistics.getExerciseAverage(flag, Main.getWorkouts().get(0).getExercises()[i], i);
+				area.append(Main.getWorkouts().get(0).getExercises()[ex[0]].getName());
 				area.append(":\t ");
 				area.append(((Integer) (ex[1])).toString());
 				area.append("%\n");
@@ -155,7 +155,7 @@ public class Statistics {
 				}
 			}
 			for (int i = 0; i < num; i++) {
-				area.append(Main.workouts.get(0).getExercises()[ret[i][0]].getName());
+				area.append(Main.getWorkouts().get(0).getExercises()[ret[i][0]].getName());
 				area.append(":\t ");
 				area.append(((Integer) (ret[i][1])).toString());
 				area.append("%\n");
@@ -178,26 +178,26 @@ public class Statistics {
 	protected static String getMeasureStart(int flag) {
 		String ret = "";
 		if (flag == 0) {
-			if (Main.workouts.size() < MAX_DEPTH) {
-				ret = Main.workouts.get(0).getDate().toString();
+			if (Main.getWorkouts().size() < MAX_DEPTH) {
+				ret = Main.getWorkouts().get(0).getDate().toString();
 			} else {
-				ret = Main.workouts.get(Main.workouts.size() - MAX_DEPTH).getDate().toString();
+				ret = Main.getWorkouts().get(Main.getWorkouts().size() - MAX_DEPTH).getDate().toString();
 			}
 		} else if (flag == 1) {
 			int iDepth = MAX_DEPTH_DAYS;
 			int iIndexOfBeginning = 0;
-			LocalDate dDepth = Main.workouts.get((Main.workouts.size() - 1)).getDate().minusDays(iDepth);
-			if (Main.workouts.get(0).getDate().isAfter(dDepth)) {
-				ret = Main.workouts.get(0).getDate().toString();
+			LocalDate dDepth = Main.getWorkouts().get((Main.getWorkouts().size() - 1)).getDate().minusDays(iDepth);
+			if (Main.getWorkouts().get(0).getDate().isAfter(dDepth)) {
+				ret = Main.getWorkouts().get(0).getDate().toString();
 			} else {
 				while (true) {
-					if (Main.workouts.get(iIndexOfBeginning).getDate().isAfter(dDepth)
-							|| Main.workouts.get(iIndexOfBeginning).getDate().isEqual(dDepth)) {
+					if (Main.getWorkouts().get(iIndexOfBeginning).getDate().isAfter(dDepth)
+							|| Main.getWorkouts().get(iIndexOfBeginning).getDate().isEqual(dDepth)) {
 						break;
 					}
 					iIndexOfBeginning++;
 				}
-				ret = Main.workouts.get(iIndexOfBeginning).getDate().toString();
+				ret = Main.getWorkouts().get(iIndexOfBeginning).getDate().toString();
 			}
 		}
 		return ret;

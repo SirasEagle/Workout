@@ -25,7 +25,7 @@ public class Main {
 	 * 
 	 * @author Adrian Leutert
 	 */
-	public static List<Day> workouts;
+	private static List<Day> workouts;
 	/**
 	 * This list contains every exercise a user has noted. <br>
 	 * Not the workouts themselves.
@@ -125,12 +125,23 @@ public class Main {
 	public static short getSmartFlag() {
 		return Main.smartFlag;
 	}
+
+	public static List<logic.Day> getWorkouts() {
+		return Main.workouts;
+	}
+
+	public static void setWorkouts(List<logic.Day> newList) {
+		if (newList != null) {
+			Main.workouts = newList;
+		}
+	}
 	
 	public static void setUserFlag(int flag) {
 		if ((flag != 0) && (flag != 1)) {
 			return;
 		}
 		userFlag = (short)flag;
+		pastJumps = 0; // reset calender jumps
 	}
 	
 	public static void setSmartFlag(int flag) {
