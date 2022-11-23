@@ -25,7 +25,7 @@ public class Exercise implements Comparable<Exercise> {
 
 	public Exercise(int index) throws FileNotFoundException {
 		this.index = index;
-		this.picPath = ExerciseManager.getPicPath(index);
+		this.picPath = ExerciseManager.getPicPath(ExerciseManager.getName(index));
 		this.name = ExerciseManager.getName(index);
 		this.mediumReps = ExerciseManager.getMedRep(index);
 		this.fColor = ExerciseManager.getExeColor(index);

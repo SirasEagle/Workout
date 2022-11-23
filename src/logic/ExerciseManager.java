@@ -26,14 +26,10 @@ public class ExerciseManager {
 	 * @param exeIndex The index of the exercise, use this.index
 	 * @return the selected
 	 */
-	protected static String getPicPath(int exeIndex) {
+	protected static String getPicPath(String exeName) {
 		String ret = "";
 
-		if (Main.getUserFlag() == 0) {
-			ret = pathRelative + "user0exer\\" + (exeIndex + 1) + ".jpg";
-		} else if (Main.getUserFlag() == 1) {
-			ret = pathRelative + "user1exer\\" + (exeIndex + 1) + ".jpg";
-		}
+		ret = pathRelative + "user" + Main.getUserFlag() + "exer\\" + exeName + ".jpg";
 
 		return ret;
 	}
