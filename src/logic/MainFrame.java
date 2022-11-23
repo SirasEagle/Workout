@@ -120,7 +120,7 @@ public class MainFrame extends JFrame {
 
 		exercisePics = new File[Day.getMaxExercises()];
 		for (int i = 0; i < 18; i++) {
-			exercisePics[i] = new File(Main.workouts.get(0).getExercises()[i].getPicPath());
+			exercisePics[i] = new File(Main.getWorkouts().get(0).getExercises()[i].getPicPath());
 		}
 
 		setBackground(Color.BLACK);
@@ -964,9 +964,9 @@ public class MainFrame extends JFrame {
 				labelStartData.setText(Statistics.getMeasureStart(Main.getSmartFlag()));
 				Statistics.getExAverages(Main.getSmartFlag(), areaLeast, 0);
 				// // System.out.println("[GUI] " + Main.getUserFlag());
-				for (int i = 0; i < Main.workouts.size(); i++) {
-					areaStats.append(Statistics.getValueFromDay(Main.workouts.get(i)) + "% ");
-					areaStats.append(Statistics.getValueAsDots(Main.workouts.get(i)) + "\n");
+				for (int i = 0; i < Main.getWorkouts().size(); i++) {
+					areaStats.append(Statistics.getValueFromDay(Main.getWorkouts().get(i)) + "% ");
+					areaStats.append(Statistics.getValueAsDots(Main.getWorkouts().get(i)) + "\n");
 				}
 				areaLeast.setCaretPosition(0);
 				panelContent.hide();
@@ -1050,7 +1050,7 @@ public class MainFrame extends JFrame {
 				if (radioUser0.isSelected() && Main.getUserFlag() == 0) {
 					Main.lines = TextToObject.getLinesFromFile();
 					try {
-						Main.workouts = TextToObject.getDaysFromLines(Main.lines);
+						Main.setWorkouts(TextToObject.getDaysFromLines(Main.lines));
 					} catch (FileNotFoundException e1) {
 						e1.printStackTrace();
 					}
@@ -1069,7 +1069,7 @@ public class MainFrame extends JFrame {
 					Main.setUserFlag(0);
 					Main.lines = TextToObject.getLinesFromFile();
 					try {
-						Main.workouts = TextToObject.getDaysFromLines(Main.lines);
+						Main.setWorkouts(TextToObject.getDaysFromLines(Main.lines));
 					} catch (FileNotFoundException e2) {
 						e2.printStackTrace();
 					}
@@ -1077,7 +1077,7 @@ public class MainFrame extends JFrame {
 
 					exercisePics = new File[Day.getMaxExercises()];
 					for (int i = 0; i < 18; i++) {
-						exercisePics[i] = new File(Main.workouts.get(0).getExercises()[i].getPicPath());
+						exercisePics[i] = new File(ExerciseManager.getPicPath(Main.exercises.get(i).getName()));
 					}
 					try {
 						buttonExc1.setText(" " + ExerciseManager.getName(0));
@@ -1119,7 +1119,7 @@ public class MainFrame extends JFrame {
 				if (radioUser1.isSelected() && Main.getUserFlag() == 1) {
 					Main.lines = TextToObject.getLinesFromFile();
 					try {
-						Main.workouts = TextToObject.getDaysFromLines(Main.lines);
+						Main.setWorkouts(TextToObject.getDaysFromLines(Main.lines));
 					} catch (FileNotFoundException e1) {
 						e1.printStackTrace();
 					}
@@ -1137,7 +1137,7 @@ public class MainFrame extends JFrame {
 					Main.setUserFlag(1);
 					Main.lines = TextToObject.getLinesFromFile();
 					try {
-						Main.workouts = TextToObject.getDaysFromLines(Main.lines);
+						Main.setWorkouts(TextToObject.getDaysFromLines(Main.lines));
 					} catch (FileNotFoundException e2) {
 						e2.printStackTrace();
 					}
@@ -1145,7 +1145,7 @@ public class MainFrame extends JFrame {
 
 					exercisePics = new File[Day.getMaxExercises()];
 					for (int i = 0; i < 18; i++) {
-						exercisePics[i] = new File(Main.workouts.get(0).getExercises()[i].getPicPath());
+						exercisePics[i] = new File(ExerciseManager.getPicPath(Main.exercises.get(i).getName()));
 					}
 					try {
 						buttonExc1.setText(" " + ExerciseManager.getName(0));
@@ -1511,13 +1511,13 @@ public class MainFrame extends JFrame {
 			float fColor = Colors.exOrange();
 			float fSaturation = 0.7f;
 			if (parsedValue.equals(" ") == false) {
-				int index = Main.workouts.size() - (7 - col) - Main.pastJumps;
+				int index = Main.getWorkouts().size() - (7 - col) - Main.pastJumps;
 				if (row >= 1) {
-					fBrightnes = ExerciseManager.getExeBrightnes(Main.workouts.get(index).getExercises()[row - 1]);
+					fBrightnes = ExerciseManager.getExeBrightnes(Main.getWorkouts().get(index).getExercises()[row - 1]);
 				}
 			}
 			if (row >= 1) {
-				fColor = Main.workouts.get(0).getExercises()[row - 1].getColor();
+				fColor = Main.getWorkouts().get(0).getExercises()[row - 1].getColor();
 			}
 			if ((row <= 18) && (row > 0)) {
 				label.setBackground(Color.getHSBColor(fColor, fSaturation, fBrightnes));
