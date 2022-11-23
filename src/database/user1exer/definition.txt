@@ -1,6 +1,6 @@
 [
     {
-    	"index": "17",
+    	"index": "12",
         "name": "Crunches",
         "mediumReps": "15",
         "eCol": "BLUE",
@@ -54,7 +54,7 @@
         "set3": "0"
     },
     {
-    	"index": "4",
+    	"index": "6",
         "name": "Poopin Dog",
         "mediumReps": "8",
         "eCol": "ORANGE",
@@ -72,7 +72,7 @@
         "set3": "0"
     },
     {
-    	"index": "8",
+    	"index": "17",
         "name": "Biceps Curls",
         "mediumReps": "12",
         "eCol": "PINK",
@@ -90,7 +90,7 @@
         "set3": "0"
     },
     {
-    	"index": "16",
+    	"index": "11",
         "name": "Leg Raise",
         "mediumReps": "7",
         "eCol": "BLUE",
@@ -108,7 +108,7 @@
         "set3": "0"
     },
     {
-    	"index": "12",
+    	"index": "20",
         "name": "Side bend",
         "mediumReps": "15",
         "eCol": "BLUE",
@@ -117,16 +117,16 @@
         "set3": "0"
     },
     {
-    	"index": "6",
-        "name": "Core stabil",
-        "mediumReps": "10",
-        "eCol": "YELLOW",
+    	"index": "4",
+        "name": "Beinpresse",
+        "mediumReps": "15",
+        "eCol": "RED",
         "set1": "0",
         "set2": "0",
         "set3": "0"
     },
     {
-    	"index": "11",
+    	"index": "8",
         "name": "Dance-work.",
         "mediumReps": "1",
         "eCol": "GREEN",
@@ -166,6 +166,24 @@
         "name": "Bow extend.",
         "mediumReps": "10",
         "eCol": "BLUE",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
+    },
+    {
+    	"index": "19",
+        "name": "Core stabil",
+        "mediumReps": "10",
+        "eCol": "YELLOW",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
+    },
+    {
+    	"index": "16",
+        "name": "Latzug",
+        "mediumReps": "15",
+        "eCol": "PINK",
         "set1": "0",
         "set2": "0",
         "set3": "0"
