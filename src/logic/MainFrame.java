@@ -8,7 +8,6 @@ import javax.swing.table.DefaultTableCellRenderer;
 
 import Design.Colors;
 import Design.ModernScrollPane;
-import database.TextToObject;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -56,6 +55,7 @@ public class MainFrame extends JFrame {
 	private static final int imgWIDTH = 200;
 	private static final int imgHEIGHT = 225;
 	private static final int imgX = 5;
+	private static int iRow = 0;
 	private JPanel panelMenu;
 	private JPanel panelMenu2;
 	private JPanel panelMenu3;
@@ -89,6 +89,7 @@ public class MainFrame extends JFrame {
 	private JButton buttonExec18;
 	private JButton buttonCat2;
 	private JButton exit;
+	private JLabel lblDetails;
 	private JLabel labelPerformance;
 	private JLabel labelPerfData;
 	private JLabel labelStartData;
@@ -117,8 +118,9 @@ public class MainFrame extends JFrame {
 	 * @throws IOException
 	 */
 	public MainFrame() throws IOException {
+		
 
-		exercisePics = new File[Day.getMaxExercises()];
+		exercisePics = new File[Main.tableColSize];
 		for (int i = 0; i < 18; i++) {
 			exercisePics[i] = new File(Main.getWorkouts().get(0).getExercises()[i].getPicPath());
 		}
@@ -270,25 +272,7 @@ public class MainFrame extends JFrame {
 		buttonExc1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 20, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[0]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[0]);
 			}
 		});
 
@@ -296,25 +280,7 @@ public class MainFrame extends JFrame {
 		buttonExc2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 20, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[1]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[1]);
 			}
 		});
 
@@ -322,27 +288,7 @@ public class MainFrame extends JFrame {
 		buttonExec3.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// System.out.println("Button pressed");
-
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 20, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[2]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[2]);
 			}
 		});
 
@@ -350,27 +296,7 @@ public class MainFrame extends JFrame {
 		buttonExec4.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// System.out.println("Button pressed");
-
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 20, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[3]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[3]);
 			}
 		});
 
@@ -378,27 +304,7 @@ public class MainFrame extends JFrame {
 		buttonExec5.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// System.out.println("Button pressed");
-
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[4]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[4]);
 			}
 		});
 
@@ -406,27 +312,7 @@ public class MainFrame extends JFrame {
 		buttonExec6.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// System.out.println("Button pressed");
-
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[5]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[5]);
 			}
 		});
 
@@ -434,27 +320,7 @@ public class MainFrame extends JFrame {
 		buttonExec7.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// System.out.println("Button pressed");
-
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[6]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[6]);
 			}
 		});
 
@@ -462,27 +328,7 @@ public class MainFrame extends JFrame {
 		buttonExec8.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// System.out.println("Button pressed");
-
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[7]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[7]);
 			}
 		});
 
@@ -490,27 +336,7 @@ public class MainFrame extends JFrame {
 		buttonExec9.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// System.out.println("Button pressed");
-
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[8]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[8]);
 			}
 		});
 
@@ -518,27 +344,7 @@ public class MainFrame extends JFrame {
 		buttonExec10.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// System.out.println("Button pressed");
-
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[9]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[9]);
 			}
 		});
 
@@ -546,27 +352,7 @@ public class MainFrame extends JFrame {
 		buttonExec11.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// System.out.println("Button pressed");
-
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[10]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[10]);
 			}
 		});
 
@@ -574,27 +360,7 @@ public class MainFrame extends JFrame {
 		buttonExec12.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// System.out.println("Button pressed");
-
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[11]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[11]);
 			}
 		});
 
@@ -602,27 +368,7 @@ public class MainFrame extends JFrame {
 		buttonExec13.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// System.out.println("Button pressed");
-
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[12]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[12]);
 			}
 		});
 
@@ -630,27 +376,7 @@ public class MainFrame extends JFrame {
 		buttonExec14.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// System.out.println("Button pressed");
-
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[13]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[13]);
 			}
 		});
 
@@ -658,27 +384,7 @@ public class MainFrame extends JFrame {
 		buttonExec15.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// System.out.println("Button pressed");
-
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[14]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[14]);
 			}
 		});
 
@@ -686,27 +392,7 @@ public class MainFrame extends JFrame {
 		buttonExec16.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// System.out.println("Button pressed");
-
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[15]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[15]);
 			}
 		});
 
@@ -714,27 +400,7 @@ public class MainFrame extends JFrame {
 		buttonExec17.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// System.out.println("Button pressed");
-
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[16]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[16]);
 			}
 		});
 
@@ -742,29 +408,66 @@ public class MainFrame extends JFrame {
 		buttonExec18.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// System.out.println("Button pressed");
-
-				// Image
-				labelImage.setVisible(false);
-
-				labelImage = new JLabel("New label");
-				labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
-				Image image = null;
-				try {
-					image = ImageIO.read(exercisePics[17]);
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-				Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
-				ImageIcon icon = new ImageIcon(dimg);
-				labelImage.setIcon(icon);
-				panelMenu2.add(labelImage);
-
-				// refreshes page
-				contentPane.validate();
-				contentPane.repaint();
+				setExePic(exercisePics[17]);
 			}
 		});
+
+		for (int j = 0; j < Main.tableWidthSize; j++) {
+			int x = 194 + (j * 98);
+			for (iRow = 0; iRow < Main.tableColSize; iRow++) {
+				int y = 106 + (iRow * 22);
+				JButton buttonDetail = new JButton(" ");
+				buttonDetail.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						// TODO:
+						// Hole Day-> exercise Daten von genau der Koordinate. Orientierung an
+						// Farblabels
+						//
+						// System.out.println("Button pressed");
+						int currentCol = ((buttonDetail.getX() - 194) / 98) + 1;
+						int currentRow = ((buttonDetail.getY() - 106) / 22) + 1;
+						int index = Main.getWorkouts().size() - (7 - currentCol) - Main.pastJumps;
+						Exercise xx = null;
+						if (currentRow >= 1) {
+							xx = Main.getWorkouts().get(index).getExercises()[currentRow - 1];
+						}
+						lblDetails.setText(xx.getName() + ": " + xx.set1 + "-" + xx.set2 + "-" + xx.set3);
+
+						// Image
+						labelImage.setVisible(false);
+
+						labelImage = new JLabel("New label");
+						labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
+						Image image = null;
+						try {
+							image = ImageIO.read(exercisePics[17]);
+						} catch (IOException e1) {
+							e1.printStackTrace();
+						}
+						Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(),
+								Image.SCALE_SMOOTH);
+						ImageIcon icon = new ImageIcon(dimg);
+						labelImage.setIcon(icon);
+						panelMenu2.add(labelImage);
+
+						// refreshes page
+						contentPane.validate();
+						contentPane.repaint();
+					}
+				});
+				buttonDetail.setOpaque(false);
+				buttonDetail.setHorizontalAlignment(SwingConstants.LEFT);
+				buttonDetail.setForeground(Color.WHITE);
+				buttonDetail.setFont(new Font("Courier New", Font.PLAIN, 10));
+				buttonDetail.setFocusable(false);
+				buttonDetail.setContentAreaFilled(false);
+				buttonDetail.setBorderPainted(false);
+				buttonDetail.setBorder(null);
+				buttonDetail.setBounds(x, y, 95, 21);
+				panelContent.add(buttonDetail);
+			}
+		}
 
 		buttonExec18.setOpaque(false);
 		buttonExec18.setHorizontalAlignment(SwingConstants.LEFT);
@@ -1048,14 +751,7 @@ public class MainFrame extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if (radioUser0.isSelected() && Main.getUserFlag() == 0) {
-					Main.lines = TextToObject.getLinesFromFile();
-					try {
-						Main.setWorkouts(TextToObject.getDaysFromLines(Main.lines));
-					} catch (FileNotFoundException e1) {
-						e1.printStackTrace();
-					}
 					Main.refreshContent();
-
 					// refreshes page
 					contentPane.validate();
 					contentPane.repaint();
@@ -1067,15 +763,8 @@ public class MainFrame extends JFrame {
 			public void itemStateChanged(ItemEvent e) {
 				if (radioUser0.isSelected() && Main.getUserFlag() != 0) {
 					Main.setUserFlag(0);
-					Main.lines = TextToObject.getLinesFromFile();
-					try {
-						Main.setWorkouts(TextToObject.getDaysFromLines(Main.lines));
-					} catch (FileNotFoundException e2) {
-						e2.printStackTrace();
-					}
 					Main.refreshContent();
-
-					exercisePics = new File[Day.getMaxExercises()];
+					exercisePics = new File[Main.tableColSize];
 					for (int i = 0; i < 18; i++) {
 						exercisePics[i] = new File(ExerciseManager.getPicPath(Main.exercises.get(i).getName()));
 					}
@@ -1117,14 +806,7 @@ public class MainFrame extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if (radioUser1.isSelected() && Main.getUserFlag() == 1) {
-					Main.lines = TextToObject.getLinesFromFile();
-					try {
-						Main.setWorkouts(TextToObject.getDaysFromLines(Main.lines));
-					} catch (FileNotFoundException e1) {
-						e1.printStackTrace();
-					}
 					Main.refreshContent();
-
 					// refreshes page
 					contentPane.validate();
 					contentPane.repaint();
@@ -1135,15 +817,8 @@ public class MainFrame extends JFrame {
 			public void itemStateChanged(ItemEvent e) {
 				if (radioUser1.isSelected() && Main.getUserFlag() != 1) {
 					Main.setUserFlag(1);
-					Main.lines = TextToObject.getLinesFromFile();
-					try {
-						Main.setWorkouts(TextToObject.getDaysFromLines(Main.lines));
-					} catch (FileNotFoundException e2) {
-						e2.printStackTrace();
-					}
 					Main.refreshContent();
-
-					exercisePics = new File[Day.getMaxExercises()];
+					exercisePics = new File[Main.tableColSize];
 					for (int i = 0; i < 18; i++) {
 						exercisePics[i] = new File(ExerciseManager.getPicPath(Main.exercises.get(i).getName()));
 					}
@@ -1181,6 +856,11 @@ public class MainFrame extends JFrame {
 		bgUserSelector = new ButtonGroup();
 		bgUserSelector.add(radioUser0);
 		bgUserSelector.add(radioUser1);
+
+		lblDetails = new JLabel("");
+		lblDetails.setForeground(new Color(192, 192, 192));
+		lblDetails.setBounds(358, 513, 400, 14);
+		panelContent.add(lblDetails);
 
 		JLabel lblNewLabel = new JLabel("1");
 		lblNewLabel.setForeground(new Color(192, 192, 192));
@@ -1493,6 +1173,28 @@ public class MainFrame extends JFrame {
 		panelOverfiew.add(panelSelect);
 		panelMain.add(panelOverfiew);
 	}
+
+	protected void setExePic(File file) {
+		// Image
+		labelImage.setVisible(false);
+
+		labelImage = new JLabel("New label");
+		labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
+		Image image = null;
+		try {
+			image = ImageIO.read(file);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+		Image dimg = image.getScaledInstance(labelImage.getWidth(), labelImage.getHeight(), Image.SCALE_SMOOTH);
+		ImageIcon icon = new ImageIcon(dimg);
+		labelImage.setIcon(icon);
+		panelMenu2.add(labelImage);
+
+		// refreshes page
+		contentPane.validate();
+		contentPane.repaint();
+}
 
 	class CustomColumnCellRenderer extends DefaultTableCellRenderer {
 		/**
