@@ -81,7 +81,7 @@
         "set3": "0"
     },
     {
-    	"index": "9",
+    	"index": "22",
         "name": "Pull-close L",
         "mediumReps": "9",
         "eCol": "PINK",
@@ -135,7 +135,7 @@
         "set3": "0"
     },
     {
-    	"index": "15",
+    	"index": "21",
         "name": "Bike",
         "mediumReps": "15",
         "eCol": "BLUE",
@@ -184,6 +184,33 @@
         "name": "Latzug",
         "mediumReps": "15",
         "eCol": "PINK",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
+    },
+    {
+    	"index": "15",
+        "name": "Thighs vorne",
+        "mediumReps": "11",
+        "eCol": "RED",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
+    },
+    {
+    	"index": "9",
+        "name": "Thighs innen",
+        "mediumReps": "21",
+        "eCol": "RED",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
+    },
+    {
+    	"index": "23",
+        "name": "Thighs auss.",
+        "mediumReps": "25",
+        "eCol": "RED",
         "set1": "0",
         "set2": "0",
         "set3": "0"

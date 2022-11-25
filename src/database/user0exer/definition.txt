@@ -160,5 +160,23 @@
         "set1": "0",
         "set2": "0",
         "set3": "0"
+    },
+    {
+    	"index": "18",
+        "name": "Sprinter",
+        "mediumReps": "35",
+        "eCol": "BLUE",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
+    },
+    {
+    	"index": "19",
+        "name": "Plank sec.",
+        "mediumReps": "300",
+        "eCol": "CYAN",
+        "set1": "0",
+        "set2": "0",
+        "set3": "0"
     }
 ]
