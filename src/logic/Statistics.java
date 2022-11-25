@@ -14,7 +14,10 @@ public class Statistics {
 	public static int getValueFromDay(Day day) {
 		int value = 0;
 		int sum = 0;
-		for (int i = 0; i < Day.getMaxExercises(); i++) {
+		// TODO: now: reads the value of the first 18 (Main.tableColSize) exercises,
+		// should read of all (Day.getMaxExercises()) and only take the ones that are
+		// not 0 (+ zeros until 18)
+		for (int i = 0; i < Main.tableColSize; i++) {
 			sum += day.getExercises()[i].set1;
 			sum += day.getExercises()[i].set2;
 			sum += day.getExercises()[i].set3;
@@ -23,7 +26,7 @@ public class Statistics {
 
 			sum = 0;
 		}
-		value = value / Day.getMaxExercises();
+		value = value / Main.tableColSize;
 		return value;
 	}
 
@@ -54,7 +57,13 @@ public class Statistics {
 		return ret;
 	}
 
-	private static int[] getExerciseAverage(int flag, Exercise exercise, int index) {
+	/**
+	 * 
+	 * @param flag  - 0=PureWorkoutView, 1=EfficiientWorkoutView
+	 * @param index - index of exercise in Main.exercises
+	 * @return
+	 */
+	private static int[] getExerciseAverage(int flag, int index) {
 		int[] ret = { 0, 0 };
 		if (flag == 0) {
 			int iDepth = MAX_DEPTH;
@@ -106,7 +115,7 @@ public class Statistics {
 		int num = Day.getMaxExercises();
 		int[][] ret = new int[num][2];
 		for (int i = 0; i < num; i++) {
-			int[] ex = Statistics.getExerciseAverage(flag, Main.getWorkouts().get(0).getExercises()[i], i);
+			int[] ex = Statistics.getExerciseAverage(flag, i);
 			ret[i][0] = ex[0];
 			ret[i][1] = ex[1];
 		}
@@ -123,9 +132,18 @@ public class Statistics {
 		int[][] ret = new int[num][2];
 		if (type == 0) {
 			for (int i = 0; i < Day.getMaxExercises(); i++) {
-				int[] ex = Statistics.getExerciseAverage(flag, Main.getWorkouts().get(0).getExercises()[i], i);
+				int[] ex = Statistics.getExerciseAverage(flag, i);
+				area.append("[" + (Main.getWorkouts().get(0).getExercises()[ex[0]].getIndex() + 1) + "] ");
 				area.append(Main.getWorkouts().get(0).getExercises()[ex[0]].getName());
-				area.append(":\t ");
+				area.append(":\t");
+				if ((Main.getWorkouts().get(0).getExercises()[ex[0]].getName().length() < 13)
+						&& ((Main.getWorkouts().get(0).getExercises()[ex[0]].getIndex() + 1) < 10)) {
+					area.append("\t");
+				}
+				if ((Main.getWorkouts().get(0).getExercises()[ex[0]].getName().length() < 12)
+						&& ((Main.getWorkouts().get(0).getExercises()[ex[0]].getIndex() + 1) >= 10)) {
+					area.append("\t");
+				}
 				area.append(((Integer) (ex[1])).toString());
 				area.append("%\n");
 			}
@@ -155,8 +173,17 @@ public class Statistics {
 				}
 			}
 			for (int i = 0; i < num; i++) {
+				area.append("[" + (Main.getWorkouts().get(0).getExercises()[ret[i][0]].getIndex() + 1) + "] ");
 				area.append(Main.getWorkouts().get(0).getExercises()[ret[i][0]].getName());
-				area.append(":\t ");
+				area.append(":\t");
+				if ((Main.getWorkouts().get(0).getExercises()[ret[i][0]].getName().length() < 13)
+						&& ((Main.getWorkouts().get(0).getExercises()[ret[i][0]].getIndex() + 1) < 10)) {
+					area.append("\t");
+				}
+				if ((Main.getWorkouts().get(0).getExercises()[ret[i][0]].getName().length() < 12)
+						&& ((Main.getWorkouts().get(0).getExercises()[ret[i][0]].getIndex() + 1) >= 10)) {
+					area.append("\t");
+				}
 				area.append(((Integer) (ret[i][1])).toString());
 				area.append("%\n");
 			}
@@ -168,10 +195,10 @@ public class Statistics {
 	protected static int getPerformance(int flag) {
 		int ret = 0;
 		int[][] all = getAllExerciseAverages(flag);
-		for (int i = 0; i < Day.getMaxExercises(); i++) {
+		for (int i = 0; i < Main.tableColSize; i++) {
 			ret += all[i][1];
 		}
-		ret = ret / Day.getMaxExercises();
+		ret = ret / Main.tableColSize;
 		return ret;
 	}
 

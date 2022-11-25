@@ -35,6 +35,8 @@ public class Main {
 	public static List<Exercise> exercises;
 	private static short userFlag = 0;
 	private static short smartFlag = 0;
+	public final static int tableColSize = 18;
+	public final static int tableWidthSize = 6;
 
 	public static void main(String[] args) throws IOException {
 
@@ -83,12 +85,14 @@ public class Main {
 	}
 
 	public static void refreshContent() {
+		Main.lines = TextToObject.getLinesFromFile();
 		try {
 			ExerciseManager.updateExercises(userFlag);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			Main.setWorkouts(TextToObject.getDaysFromLines(Main.lines));
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
 		}
-		int tableWidth = 6;
+		int tableWidth = tableWidthSize;
 		if (workouts.size() < 6) {
 			tableWidth = workouts.size();
 		}
@@ -97,7 +101,7 @@ public class Main {
 			if (workouts.get(index) != null) {
 				oContent[0][1 + i] = workouts.get(index).getDate().toString();
 				Exercise[] exercises = workouts.get(index).getExercises();
-				for (int j = 0; j < Day.getMaxExercises(); j++) {
+				for (int j = 0; j < tableColSize; j++) {
 					if ((exercises[j].set1 + exercises[j].set2 + exercises[j].set3) == 0) {
 						oContent[1 + j][1 + i] = " ";
 					} else {
@@ -121,7 +125,7 @@ public class Main {
 	public static short getUserFlag() {
 		return Main.userFlag;
 	}
-	
+
 	public static short getSmartFlag() {
 		return Main.smartFlag;
 	}
@@ -135,19 +139,19 @@ public class Main {
 			Main.workouts = newList;
 		}
 	}
-	
+
 	public static void setUserFlag(int flag) {
 		if ((flag != 0) && (flag != 1)) {
 			return;
 		}
-		userFlag = (short)flag;
+		userFlag = (short) flag;
 		pastJumps = 0; // reset calender jumps
 	}
-	
+
 	public static void setSmartFlag(int flag) {
 		if ((flag != 0) && (flag != 1)) {
 			return;
 		}
-		smartFlag = (short)flag;
+		smartFlag = (short) flag;
 	}
 }

@@ -6,16 +6,20 @@ import java.time.LocalDate;
 public class Day {
 
 	private LocalDate date;
-	private static int maxExercises = 18;
+	private static int maxExercises = Main.tableColSize;
 	private Exercise[] exercises;
 	private int value;
 
 	/**
 	 * Creates a new Day with 20.05.2022 as the date
+	 * 
 	 * @throws FileNotFoundException
 	 */
 	public Day() throws FileNotFoundException {
 		this.date = LocalDate.now();
+		if (Main.exercises.size() > Main.tableColSize) {
+			maxExercises = Main.exercises.size();
+		}
 		this.exercises = new Exercise[maxExercises];
 		for (int i = 0; i < maxExercises; i++) {
 			this.exercises[i] = new Exercise(i);
@@ -47,7 +51,7 @@ public class Day {
 	public void setExercises(Exercise[] exercises) {
 		this.exercises = exercises;
 	}
-	
+
 	public int getValue() {
 		return value;
 	}
@@ -71,6 +75,11 @@ public class Day {
 	}
 
 	public void addExercise(int exIndex, int i, int j, int k) {
+		if (exercises.length < exIndex) {
+			System.out.println("[DAY] Exercise has a too high index");
+			System.out.println("[DAY] index=" + exIndex + ", but can fit only " + exercises.length + " exercises.");
+			return;
+		}
 		this.exercises[(exIndex - 1)].set1 = i;
 		this.exercises[(exIndex - 1)].set2 = j;
 		this.exercises[(exIndex - 1)].set3 = k;
