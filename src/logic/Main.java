@@ -37,6 +37,10 @@ public class Main {
 	private static short smartFlag = 0;
 	public final static int tableColSize = 18;
 	public final static int tableWidthSize = 6;
+	/**
+	 * 0=Windows<br>1=iOS
+	 */
+	public static int osFlag = 1;
 
 	public static void main(String[] args) throws IOException {
 

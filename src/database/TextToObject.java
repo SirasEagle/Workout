@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import logic.Day;
+import logic.ExerciseManager;
 import logic.Main;
 import logic.Statistics;
 
@@ -25,7 +26,8 @@ public class TextToObject {
 		List<String> allLines = null;
 		try {
 			allLines = Files.readAllLines(
-					Paths.get("src\\database\\user" + Main.getUserFlag() + "exer").toAbsolutePath()
+					Paths.get("src" + ExerciseManager.getPathChar() + "database" + ExerciseManager.getPathChar()
+							+ "user" + Main.getUserFlag() + "exer").toAbsolutePath()
 							.resolve("exercises.txt"),
 					StandardCharsets.UTF_8);
 		} catch (IOException e) {

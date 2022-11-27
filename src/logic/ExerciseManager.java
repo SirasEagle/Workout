@@ -18,7 +18,7 @@ public class ExerciseManager {
 
 	// private static String pathAbsolute = "C:\\Adrian\\3_Selfmade\\5_Programme\\_1
 	// Java\\alul\\src\\database\\";
-	private static String pathRelative = "src\\database\\";
+	private static String pathRelative = "src" + ExerciseManager.getPathChar() + "database" + ExerciseManager.getPathChar();
 
 	/**
 	 * Chooses a user specific image for the exercise, identifiable by the index
@@ -29,7 +29,7 @@ public class ExerciseManager {
 	protected static String getPicPath(String exeName) {
 		String ret = "";
 
-		ret = pathRelative + "user" + Main.getUserFlag() + "exer\\" + exeName + ".jpg";
+		ret = pathRelative + "user" + Main.getUserFlag() + "exer" + ExerciseManager.getPathChar() + exeName + ".jpg";
 
 		return ret;
 	}
@@ -142,7 +142,7 @@ public class ExerciseManager {
 		// BufferedReader reader = new BufferedReader(new FileReader(
 		// pathAbsolute + "user" + user + "exer\\definition.txt"));
 		BufferedReader reader = new BufferedReader(new FileReader(
-				pathRelative + "user" + user + "exer\\definition.txt"));
+				pathRelative + "user" + user + "exer" + ExerciseManager.getPathChar() + "definition.txt"));
 		String jsonString = "";
 		String line = "";
 		try {
@@ -192,6 +192,16 @@ public class ExerciseManager {
 
 		for (int i = 0; i < emp.length; i++) {
 			Main.exercises.add(emp[i]);
+		}
+	}
+
+	public static String getPathChar() {
+		if (Main.osFlag == 0) {
+			return "\\";
+		} else if (Main.osFlag == 1) {
+			return "/";
+		} else {
+			return "/";
 		}
 	}
 }
