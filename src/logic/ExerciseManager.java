@@ -61,12 +61,12 @@ public class ExerciseManager {
 		float isMedian = exeCount / 3f;
 		Integer shouldMedian = exe.getMediumReps();
 		float fBrightnes = isMedian / (shouldMedian * 2.2f);
-
+		fBrightnes += 0.1f;
 		if (fBrightnes > 1f) {
 			fBrightnes = 1f;
 		}
 
-		return (fBrightnes + 0.1f);
+		return fBrightnes;
 	}
 
 	public static float getExeColor(int index) throws FileNotFoundException {
