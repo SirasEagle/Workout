@@ -65,7 +65,7 @@
     {
     	"index": "5",
         "name": "Bridges",
-        "mediumReps": "12",
+        "mediumReps": "15",
         "eCol": "ORANGE",
         "set1": "0",
         "set2": "0",
@@ -82,7 +82,7 @@
     },
     {
     	"index": "22",
-        "name": "Pull-close L",
+        "name": "PullClose L",
         "mediumReps": "9",
         "eCol": "PINK",
         "set1": "0",
@@ -92,7 +92,7 @@
     {
     	"index": "11",
         "name": "Leg Raise",
-        "mediumReps": "7",
+        "mediumReps": "8",
         "eCol": "BLUE",
         "set1": "0",
         "set2": "0",
@@ -127,7 +127,7 @@
     },
     {
     	"index": "8",
-        "name": "Dance-work.",
+        "name": "DanceWork.",
         "mediumReps": "1",
         "eCol": "GREEN",
         "set1": "0",
