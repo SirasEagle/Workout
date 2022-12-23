@@ -91,7 +91,9 @@ public class MainFrame extends JFrame {
 	private JButton exit;
 	private JLabel lblDetails;
 	private JLabel labelPerformance;
+	private JLabel labelMedOfExer;
 	private JLabel labelPerfData;
+	private JLabel labelMedOfExerData;
 	private JLabel labelStartData;
 	private JLabel lblNewLabel_1_2;
 	private JLabel lblNewLabel_1_3;
@@ -108,8 +110,6 @@ public class MainFrame extends JFrame {
 	private JLabel lblNewLabel_1_14;
 	private JLabel lblNewLabel_1_15;
 	private JScrollBar scrollChosen;
-	private JRadioButton radioDayFocus;
-	private JRadioButton radioOverall;
 	private JButton buttonToMost;
 
 	/**
@@ -118,7 +118,6 @@ public class MainFrame extends JFrame {
 	 * @throws IOException
 	 */
 	public MainFrame() throws IOException {
-		
 
 		exercisePics = new File[Main.tableColSize];
 		for (int i = 0; i < 18; i++) {
@@ -420,11 +419,6 @@ public class MainFrame extends JFrame {
 				buttonDetail.addMouseListener(new MouseAdapter() {
 					@Override
 					public void mouseClicked(MouseEvent e) {
-						// TODO:
-						// Hole Day-> exercise Daten von genau der Koordinate. Orientierung an
-						// Farblabels
-						//
-						// System.out.println("Button pressed");
 						int currentCol = ((buttonDetail.getX() - 194) / 98) + 1;
 						int currentRow = ((buttonDetail.getY() - 106) / 22) + 1;
 						int index = Main.getWorkouts().size() - (7 - currentCol) - Main.pastJumps;
@@ -441,7 +435,7 @@ public class MainFrame extends JFrame {
 						labelImage.setBounds(imgX, 30, imgWIDTH, imgHEIGHT);
 						Image image = null;
 						try {
-							image = ImageIO.read(exercisePics[17]);
+							image = ImageIO.read(exercisePics[currentRow - 1]);
 						} catch (IOException e1) {
 							e1.printStackTrace();
 						}
@@ -660,12 +654,12 @@ public class MainFrame extends JFrame {
 		buttonStatistics.addActionListener(new ActionListener() {
 			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
-				Main.setSmartFlag(0);
 				areaStats.setText("");
 				areaLeast.setText("");
-				labelPerfData.setText(Statistics.getPerformance(Main.getSmartFlag()) + "%");
-				labelStartData.setText(Statistics.getMeasureStart(Main.getSmartFlag()));
-				Statistics.getExAverages(Main.getSmartFlag(), areaLeast, 0);
+				labelPerfData.setText(Statistics.getPerformance(1) + "%");
+				labelMedOfExerData.setText(Statistics.getPerformance(0) + "%");
+				labelStartData.setText(Statistics.getMeasureStart(1));
+				Statistics.getExAverages(1, areaLeast, 0);
 				// // System.out.println("[GUI] " + Main.getUserFlag());
 				for (int i = 0; i < Main.getWorkouts().size(); i++) {
 					areaStats.append(Statistics.getValueFromDay(Main.getWorkouts().get(i)) + "% ");
@@ -676,8 +670,6 @@ public class MainFrame extends JFrame {
 				panelOverfiew.hide();
 				panelStatistics.show();
 				labelImage.setVisible(false);
-				radioDayFocus.setSelected(true);
-				radioOverall.setSelected(false);
 				panelMenu1.setBackground(Colors.cyanBackLight());
 				panelMenu2.setBackground(Colors.cyanBack());
 				panelMenu3.setBackground(Colors.cyanBack());
@@ -960,59 +952,6 @@ public class MainFrame extends JFrame {
 		panelStatistics.setBounds(210, 0, (WIDTH - menuWIDTH + 5), HEIGHT);
 		panelStatistics.setLayout(null);
 
-		// RadioButtons:________________________________________________________
-		ButtonGroup bgStatType;
-		JPanel panelStatSelection = new JPanel();
-		panelStatSelection.setBackground(Colors.cyanBack());
-		panelStatSelection.setBounds(statCol3X, (statRow1 + 25), 95, 65);
-		panelStatistics.add(panelStatSelection);
-		radioDayFocus = new JRadioButton("Day focus");
-		radioDayFocus.setForeground(Color.WHITE);
-		radioDayFocus.setBackground(Colors.cyanBackLight());
-		radioDayFocus.setSelected(true);
-		radioDayFocus.addItemListener(new ItemListener() {
-			public void itemStateChanged(ItemEvent e) {
-				if (radioDayFocus.isSelected() && Main.getSmartFlag() != 0) {
-					Main.setSmartFlag(0);
-
-					areaLeast.setText("");
-					labelPerfData.setText(Statistics.getPerformance(Main.getSmartFlag()) + "%");
-					labelStartData.setText(Statistics.getMeasureStart(Main.getSmartFlag()));
-					Statistics.getExAverages(Main.getSmartFlag(), areaLeast, 0);
-					areaLeast.setCaretPosition(0);
-
-					// refreshes page
-					contentPane.validate();
-					contentPane.repaint();
-				}
-			}
-		});
-		panelStatSelection.add(radioDayFocus);
-		radioOverall = new JRadioButton("Efficiency");
-		radioOverall.setForeground(Color.WHITE);
-		radioOverall.setBackground(Colors.cyanBackLight());
-		radioOverall.addItemListener(new ItemListener() {
-			public void itemStateChanged(ItemEvent e) {
-				if (radioOverall.isSelected() && Main.getSmartFlag() != 1) {
-					Main.setSmartFlag(1);
-
-					areaLeast.setText("");
-					labelPerfData.setText(Statistics.getPerformance(Main.getSmartFlag()) + "%");
-					labelStartData.setText(Statistics.getMeasureStart(Main.getSmartFlag()));
-					Statistics.getExAverages(Main.getSmartFlag(), areaLeast, 0);
-					areaLeast.setCaretPosition(0);
-
-					// refreshes page
-					contentPane.validate();
-					contentPane.repaint();
-				}
-			}
-		});
-		panelStatSelection.add(radioOverall);
-		bgStatType = new ButtonGroup();
-		bgStatType.add(radioDayFocus);
-		bgStatType.add(radioOverall);
-
 		// Facts:_______________________________________________________________
 		JPanel panelFacts = new JPanel();
 		panelFacts.setBounds(statCol2X, statRow1, 230, 200);
@@ -1032,6 +971,10 @@ public class MainFrame extends JFrame {
 		labelMesStart.setBounds(10, 40, 95, 14);
 		panelFacts.add(labelMesStart);
 		JLabel labelDots2 = new JLabel("----------------------------------");
+		labelMedOfExer = new JLabel("MedOfExerc.:");
+		labelMedOfExer.setForeground(Colors.limeWeak());
+		labelMedOfExer.setBounds(10, 70, 95, 14);
+		panelFacts.add(labelMedOfExer);
 		labelDots2.setForeground(Colors.limeBackLight());
 		labelDots2.setBounds(10, 40, 140, 14);
 		panelFacts.add(labelDots2);
@@ -1043,6 +986,10 @@ public class MainFrame extends JFrame {
 		labelPerfData.setForeground(Colors.lime());
 		labelPerfData.setBounds(150, 10, 30, 14);
 		panelFacts.add(labelPerfData);
+		labelMedOfExerData = new JLabel("-");
+		labelMedOfExerData.setForeground(Colors.lime());
+		labelMedOfExerData.setBounds(150, 70, 30, 14);
+		panelFacts.add(labelMedOfExerData);
 		labelStartData = new JLabel("-");
 		labelStartData.setForeground(Colors.lime());
 		labelStartData.setBounds(150, 40, 150, 14);
@@ -1062,7 +1009,7 @@ public class MainFrame extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				areaLeast.setText("");
-				Statistics.getExAverages(Main.getSmartFlag(), areaLeast, 2);
+				Statistics.getExAverages(1, areaLeast, 2);
 				areaLeast.setCaretPosition(0);
 			}
 		});
@@ -1076,7 +1023,7 @@ public class MainFrame extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				areaLeast.setText("");
-				Statistics.getExAverages(Main.getSmartFlag(), areaLeast, 1);
+				Statistics.getExAverages(1, areaLeast, 1);
 				areaLeast.setCaretPosition(0);
 			}
 		});
@@ -1090,7 +1037,7 @@ public class MainFrame extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				areaLeast.setText("");
-				Statistics.getExAverages(Main.getSmartFlag(), areaLeast, 0);
+				Statistics.getExAverages(1, areaLeast, 0);
 				areaLeast.setCaretPosition(0);
 			}
 		});
@@ -1194,7 +1141,7 @@ public class MainFrame extends JFrame {
 		// refreshes page
 		contentPane.validate();
 		contentPane.repaint();
-}
+	}
 
 	class CustomColumnCellRenderer extends DefaultTableCellRenderer {
 		/**

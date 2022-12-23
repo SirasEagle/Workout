@@ -34,13 +34,13 @@ public class Main {
 	 */
 	public static List<Exercise> exercises;
 	private static short userFlag = 0;
-	private static short smartFlag = 0;
 	public final static int tableColSize = 18;
 	public final static int tableWidthSize = 6;
 	/**
-	 * 0=Windows<br>1=iOS
+	 * 0=Windows<br>
+	 * 1=iOS
 	 */
-	public static int osFlag = 1;
+	public static int osFlag = 0;
 
 	public static void main(String[] args) throws IOException {
 
@@ -130,10 +130,6 @@ public class Main {
 		return Main.userFlag;
 	}
 
-	public static short getSmartFlag() {
-		return Main.smartFlag;
-	}
-
 	public static List<logic.Day> getWorkouts() {
 		return Main.workouts;
 	}
@@ -150,12 +146,5 @@ public class Main {
 		}
 		userFlag = (short) flag;
 		pastJumps = 0; // reset calender jumps
-	}
-
-	public static void setSmartFlag(int flag) {
-		if ((flag != 0) && (flag != 1)) {
-			return;
-		}
-		smartFlag = (short) flag;
 	}
 }
