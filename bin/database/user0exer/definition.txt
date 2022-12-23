@@ -10,7 +10,7 @@
     },
     {
     	"index": "1",
-        "name": "Chin-ups",
+        "name": "ChinUps",
         "mediumReps": "3",
         "eCol": "ORANGE",
         "set1": "0",
@@ -19,7 +19,7 @@
     },
     {
     	"index": "2",
-        "name": "Pull-up half",
+        "name": "PullUp half",
         "mediumReps": "11",
         "eCol": "ORANGE",
         "set1": "0",
@@ -28,7 +28,7 @@
     },
     {
     	"index": "3",
-        "name": "Pull-close",
+        "name": "PullClose",
         "mediumReps": "11",
         "eCol": "ORANGE",
         "set1": "0",
@@ -46,7 +46,7 @@
     },
     {
     	"index": "5",
-        "name": "Pull-close L",
+        "name": "PullClose L",
         "mediumReps": "15",
         "eCol": "ORANGE",
         "set1": "0",
@@ -54,8 +54,8 @@
         "set3": "0"
     },
     {
-    	"index": "6",
-        "name": "Chin-ups L",
+    	"index": "19",
+        "name": "ChinUps L",
         "mediumReps": "10",
         "eCol": "ORANGE",
         "set1": "0",
@@ -64,7 +64,7 @@
     },
     {
     	"index": "7",
-        "name": "Pull-ups",
+        "name": "PullUps",
         "mediumReps": "4",
         "eCol": "ORANGE",
         "set1": "0",
@@ -82,7 +82,7 @@
     },
     {
     	"index": "9",
-        "name": "Push-ups",
+        "name": "PushUps",
         "mediumReps": "15",
         "eCol": "GREEN",
         "set1": "0",
@@ -100,7 +100,7 @@
     },
     {
     	"index": "15",
-        "name": "Hammer-Curls",
+        "name": "HammerCurls",
         "mediumReps": "16",
         "eCol": "PINK",
         "set1": "0",
@@ -136,7 +136,7 @@
     },
     {
     	"index": "13",
-        "name": "Sit-ups",
+        "name": "SitUps",
         "mediumReps": "15",
         "eCol": "BLUE",
         "set1": "0",
@@ -145,7 +145,7 @@
     },
     {
     	"index": "16",
-        "name": "B-Curls",
+        "name": "BCurls",
         "mediumReps": "15",
         "eCol": "PINK",
         "set1": "0",
@@ -154,7 +154,7 @@
     },
     {
     	"index": "17",
-        "name": "Rev-Curls",
+        "name": "RevCurls",
         "mediumReps": "14",
         "eCol": "PINK",
         "set1": "0",
@@ -171,7 +171,7 @@
         "set3": "0"
     },
     {
-    	"index": "19",
+    	"index": "6",
         "name": "Plank sec.",
         "mediumReps": "300",
         "eCol": "CYAN",
