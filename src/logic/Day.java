@@ -74,15 +74,15 @@ public class Day {
 		return retString;
 	}
 
-	public void addExercise(int exIndex, int i, int j, int k) {
+	public void addExercise(int exIndex, int set1, int set2, int set3) {
 		if (exercises.length < exIndex) {
 			System.out.println("[DAY] Exercise has a too high index");
 			System.out.println("[DAY] index=" + exIndex + ", but can fit only " + exercises.length + " exercises.");
 			return;
 		}
-		this.exercises[(exIndex - 1)].set1 = i;
-		this.exercises[(exIndex - 1)].set2 = j;
-		this.exercises[(exIndex - 1)].set3 = k;
+		this.exercises[exIndex].set1 = set1;
+		this.exercises[exIndex].set2 = set2;
+		this.exercises[exIndex].set3 = set3;
 		return;
 	}
 

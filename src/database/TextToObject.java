@@ -65,10 +65,17 @@ public class TextToObject {
 				while (true) {
 					if ((lines.get(i + cracra) != null) && (lines.get(i + cracra).charAt(0) != '-')) {
 						String[] exercises = lines.get(i + cracra).split("-");
-						int exIndex = Integer.parseInt(exercises[0].substring(1));
+						String exName = exercises[0];
 						int round1 = Integer.parseInt(exercises[1]);
 						int round2 = Integer.parseInt(exercises[2]);
 						int round3 = Integer.parseInt(exercises[3]);
+						int exIndex = 0;
+						for (int j = 0; j < Main.exercises.size(); j++) {
+							if (Main.exercises.get(j).getName().equals(exName)) {
+								exIndex = j;
+								break;
+							}
+						}
 						newDay.addExercise(exIndex, round1, round2, round3);
 					} else {
 						break;
