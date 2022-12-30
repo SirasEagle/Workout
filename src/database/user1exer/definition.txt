@@ -63,7 +63,7 @@
         "set3": "0"
     },
     {
-    	"index": "5",
+    	"index": "7",
         "name": "Bridges",
         "mediumReps": "15",
         "eCol": "ORANGE",
@@ -99,7 +99,7 @@
         "set3": "0"
     },
     {
-    	"index": "7",
+    	"index": "8",
         "name": "Shoulder",
         "mediumReps": "5",
         "eCol": "YELLOW",
@@ -126,7 +126,7 @@
         "set3": "0"
     },
     {
-    	"index": "8",
+    	"index": "15",
         "name": "DanceWork.",
         "mediumReps": "1",
         "eCol": "GREEN",
@@ -189,7 +189,7 @@
         "set3": "0"
     },
     {
-    	"index": "15",
+    	"index": "5",
         "name": "Thighs vorne",
         "mediumReps": "11",
         "eCol": "RED",

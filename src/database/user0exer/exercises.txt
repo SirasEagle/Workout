@@ -5,8 +5,9 @@ BCurls-15-10-10
 PushUps-12-12-15
 --
 2022-01-10
-SitUps-15-12-13- "Flieger": 2*12; HangmanXLegUp: 1*10+2*10
-Low back-15-15-30
+SitUps-15-12-13- HangmanXLegUp: 1*10+2*10
+Superman-12-12-0
+LowBack-15-15-30
 Kniebeuge-50-0-0
 --
 2022-01-11
@@ -27,7 +28,7 @@ Bike-21-23-27
 2022-06-02
 PullUps-4-3-2
 ChinUps-1-2-0
-PullUp half-8-8-8
+PullUpHalf-8-8-8
 Bow down-15-15-17-orange
 ChinUps L-9-9-9-orange
 PushUps-15-16-12
@@ -44,7 +45,7 @@ PushUps-15-16-17
 Triceps-15-15-13-gruen
 Shoulder-10-10-10-gruen
 BCurls-15-18-20-gruen
-Low back-20-20-20
+LowBack-20-20-20
 SitUps-15-15-15
 --
 2022-06-06
@@ -55,7 +56,7 @@ BCurls-15-15-16-(2L1S)
 --
 2022-06-10
 PullUps-6-5-4
-PullUp half-8-6-0
+PullUpHalf-8-6-0
 PullClose-10-10-10
 --
 2022-06-19
@@ -88,9 +89,9 @@ Bow down-17-17-17-orange
 PushUps-10-0-0
 --
 2022-08-03
-PullUp half-8-8-8
+PullUpHalf-8-8-8
 Triceps-18-19-25-gruen
-Low back-20-20-20
+LowBack-20-20-20
 SitUps-12-12-12
 --
 2022-08-04
@@ -108,10 +109,10 @@ BCurls-16-15-12
 --
 2022-08-10
 PullUps-3-2-2
-PullUp half-8-8-7
+PullUpHalf-8-8-7
 PushUps-17-13-12
 Shoulder-12-12-11-(2L)
-Low back-20-20-20
+LowBack-20-20-20
 SitUps-12-12-0
 --
 2022-08-12
@@ -127,7 +128,7 @@ Butterfly-16-16-16-orange Brustband Butterfly
 --
 2022-08-16
 PullUps-3-3-3
-PullUp half-9-9-9
+PullUpHalf-9-9-9
 PullClose-6-6-8
 Shoulder-13-13-14-(2L1S)
 BCurls-11-12-6
@@ -158,11 +159,11 @@ Triceps-10-10-11-orange
 PushUps-7-0-0
 SitUps-17-14-15
 Bike-20-20-20
-Low back-20-20-20
+LowBack-20-20-20
 --
 2022-08-24
 PullUps-3-2-1
-PullUp half-10-10-0
+PullUpHalf-10-10-0
 Bow down-20-20-20-orange
 Shoulder-12-12-0-(2L1S)
 HammerCurls-15-15-17-(2L1S)
@@ -175,7 +176,7 @@ ChinUps L-11-10-8-orange
 --
 2022-08-28
 PullUps-5-3-4
-PullUp half-7-7-0
+PullUpHalf-7-7-0
 Bow down-21-22-20-orange
 PushUps-15-0-0
 Triceps-12-14-5-orange
@@ -184,7 +185,7 @@ SitUps-17-15-18
 --
 2022-08-30
 PullUps-6-3-4
-PullUp half-8-8-8
+PullUpHalf-8-8-8
 PullClose L-12-15-9-orange
 Triceps-15-15-0-orange
 BCurls-13-13-12-(2L1S)
@@ -195,7 +196,7 @@ PullUps-6-4-3
 Shoulder-14-14-14-(2L1S)
 PushUps-13-15-16
 SitUps-15-6-0
-Low back-20-0-0
+LowBack-20-0-0
 --
 2022-09-08
 PullUps-3-3-3
@@ -205,12 +206,12 @@ PullUps-3-4-3
 ChinUps-1-0-0
 PushUps-14-20-10
 HammerCurls-12-15-13
-Low back-20-20-20
+LowBack-20-20-20
 SitUps-15-15-15
 --
 2022-09-11
 PullUps-4-4-4
-PullUp half-10-9-7
+PullUpHalf-10-9-7
 Bow down-20-20-20
 PullClose L-14-20-15
 Triceps-15-14-9
@@ -225,7 +226,7 @@ Butterfly-15-17-15
 --
 2022-09-14
 PullUps-3-3-3
-PullUp half-5-5-0
+PullUpHalf-5-5-0
 PushUps-8-0-0
 Shoulder-16-15-0
 BCurls-18-16-17
@@ -251,7 +252,7 @@ PullUps-3-2-0
 PushUps-11-3-0
 Shoulder-10-16-8
 HammerCurls-15-15-15
-Low back-20-22-0
+LowBack-20-22-0
 SitUps-13-13-13
 --
 2022-10-22
@@ -260,21 +261,21 @@ PushUps-13-13-5
 --
 2022-10-24
 PullUps-3-3-0
-PullUp half-7-0-0
+PullUpHalf-7-0-0
 --
 2022-10-30
-PullUp half-10-5-0
+PullUpHalf-10-5-0
 Bow down-20-0-0
 PullClose L-12-16-11
 Triceps-18-12-0
 HammerCurls-15-13-12
-Low back-20-20-20
+LowBack-20-20-20
 SitUps-16-12-13
 Butterfly-15-15-16
 --
 2022-11-04
 PullUps-2-1-2
-PullUp half-6-4-0
+PullUpHalf-6-4-0
 PullClose L-20-15-12
 ChinUps L-10-10-0
 BCurls-13-12-10
@@ -287,14 +288,14 @@ ChinUps-2-2-0
 Triceps-18-15-15
 Shoulder-10-11-0
 RevCurls-16-15-0
-Low back-20-20-0
+LowBack-20-20-0
 Kniebeuge-16-18-20
 SitUps-13-14-0
 Bike-20-20-32
 --
 2022-11-06
 PullUps-3-1-0
-PullUp half-6-0-0
+PullUpHalf-6-0-0
 Bow down-20-20-0
 PullClose L-12-9-4
 PushUps-9-8-0
@@ -302,7 +303,7 @@ SitUps-16-20-0
 --
 2022-11-08
 PullUps-4-3-4
-PullUp half-7-0-0
+PullUpHalf-7-0-0
 PullClose-13-8-0
 PushUps-7-7-0
 HammerCurls-15-12-14
@@ -311,7 +312,7 @@ Kniebeuge-17-24-17
 2022-11-09
 PullUps-2-0-0
 ChinUps-3-0-0
-PullUp half-8-5-0
+PullUpHalf-8-5-0
 PullClose-8-9-7
 PushUps-4-12-8
 Shoulder-11-12-0
@@ -328,19 +329,19 @@ PushUps-7-0-0
 BCurls-17-13-10
 --
 2022-11-11
-PullUp half-10-5-2
+PullUpHalf-10-5-2
 PullClose-8-0-0
 Bow down-22-20-16
 PullUps-3-3-3
 PushUps-11-9-0
-Low back-20-30-0
+LowBack-20-30-0
 Bike-35-0-0
 SitUps-16-15-14
 --
 2022-11-15
-PullUp half-8-7-0
+PullUpHalf-8-7-0
 PullUps-5-3-4
-Low back-27-30-33
+LowBack-27-30-33
 HammerCurls-20-14-14
 SitUps-17-17-19
 --
@@ -354,15 +355,15 @@ RevCurls-16-18-17
 --
 2022-11-17
 ChinUps-3-1-0
-PullUp half-10-8-6
+PullUpHalf-10-8-6
 Bow down-21-18-15
 PullClose L-4-2-0
 PullUps-5-4-4
-Low back-22-20-23
+LowBack-22-20-23
 HammerCurls-15-13-13
 --
 2022-11-19
-Low back-23-23-0
+LowBack-23-23-0
 PushUps-14-12-10
 Butterfly-15-16-15
 Triceps-13-12-9
@@ -371,7 +372,7 @@ SitUps-18-18-0
 --
 2022-11-21
 ChinUps-3-3-3
-PullUp half-10-8-7
+PullUpHalf-10-8-7
 PullClose-10-6-0
 Bow down-20-18-18
 PullClose L-16-15-0
@@ -387,7 +388,7 @@ Butterfly-18-13-12
 2022-11-23
 Kniebeuge-29-22-22
 ChinUps-3-0-0
-PullUp half-10-7-0
+PullUpHalf-10-7-0
 PullClose-10-0-0
 PullClose L-12-11-0
 ChinUps L-11-0-0
@@ -398,7 +399,7 @@ BCurls-16-13-12
 RevCurls-14-11-0
 --
 2022-11-24
-Low back-28-30-0
+LowBack-28-30-0
 PushUps-17-16-0
 SitUps-30-26-17
 Shoulder-12-10-16
@@ -409,7 +410,7 @@ Plank sec.-120-100-0
 2022-11-26
 Bow down-20-20-20- Latzug orang. Seil: 20-14-5
 SitUps-16-16-19
-Low back-22-22-22
+LowBack-22-22-22
 Shoulder-18-18-18-2.7kg
 PushUps-18-12-8
 Butterfly-15-15-0
@@ -436,13 +437,13 @@ Bike-30-25-30
 Kniebeuge-34-32-29
 Plank sec.-150-190-180
 PullUps-4-0-0
-Low back-21-21-21
+LowBack-21-21-21
 PushUps-21-11-0
 Shoulder-13-10-0
 --
 2022-12-01
 ChinUps-1-0-0
-PullUp half-10-8-7
+PullUpHalf-10-8-7
 PullClose-11-0-0
 Bow down-20-11-20
 PullClose L-16-0-0
@@ -451,7 +452,7 @@ BCurls-18-18-0
 --
 2022-12-03
 Kniebeuge-10-20-0
-Low back-20-20-0
+LowBack-20-20-0
 PushUps-19-6-0
 Butterfly-20-13-20
 Triceps-20-15-0
@@ -459,7 +460,7 @@ SitUps-15-16-0
 --
 2022-12-04
 ChinUps-1-0-0
-PullUp half-10-9-0
+PullUpHalf-10-9-0
 Bow down-20-0-0
 PullClose L-18-15-0
 Plank sec.-195-170-172
@@ -484,10 +485,11 @@ Kniebeuge-12-0-0
 ChinUps-3-0-0
 PullClose-10-0-0
 PullUps-4-2-4
-PullUp half-8-5-8
-PullClose L-15-12-0- 10 Flieger
+PullUpHalf-8-5-8
+PullClose L-15-12-0
+Superman-10-0-0
 Plank sec.-125-0-0
-Low back-30-0-0
+LowBack-30-0-0
 PushUps-12-10-0
 Butterfly-12-16-0
 HammerCurls-17-0-0
@@ -495,13 +497,13 @@ HammerCurls-17-0-0
 2022-12-09
 Plank sec.-150-150-160
 PullUps-5-4-3
-Low back-25-0-0
+LowBack-25-0-0
 PushUps-12-0-0
 SitUps-20-0-0
 Bike-30-0-0
 --
 2022-12-11
-PullUp half-10-0-0
+PullUpHalf-10-0-0
 PullUps-5-5-4
 PushUps-7-0-0
 --
@@ -510,17 +512,61 @@ Kniebeuge-12-0-0
 PullUps-5-4-4
 --
 2022-12-21
-PullUp half-11-8-0
+PullUpHalf-11-8-0
 Plank sec.-210-0-0
 PullUps-6-5-6
 HammerCurls-15-20-0
 --
 2022-12-23
-PullUps-6-4-0
+PullUps-6-4-3
 PushUps-16-12-10
 Butterfly-18-0-0
 Triceps-16-0-0
 Shoulder-10-0-0
+PullUpHalf-8-0-0
 BCurls-20-20-0
-Low back-30-0-0
+LowBack-30-0-0
+--
+2022-12-24
+PullUps-6-0-0
+--
+2022-12-26
+Kniebeuge-10-0-0
+PullUps-5-3-0
+Bow down-20-20-20
+PullClose L-15-14-0
+HammerCurls-21-0-0
+SitUps-11-23-0
+LowBack-30-30-0
+Superman-15-15-0
+Plank sec.-130-0-0
+PushUps-5-0-0
+--
+2022-12-27
+Butterfly-10-10-0
+--
+2022-12-28
+Kniebeuge-16-0-0
+PushUps-7-10-9
+PullUps-5-4-0
+Plank sec.-110-0-0
+PullUpHalf-5-0-0
+--
+2022-12-29
+PullUps-2-1-0
+PushUps-10-0-0
+Shoulder-11-0-0
+HammerCurls-20-16-17
+Bow down-23-21-20
+PullUpHalf-3-0-0
+RevCurls-18-16-0
+BCurls-19-13-0
+Superman-15-20-0
+--
+2022-12-30
+SitUps-20-25-21
+Kniebeuge-20-20-0
+Bike-30-30-0
+LowBack-20-20-0
+PushUps-11-10-0
 --
