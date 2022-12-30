@@ -664,6 +664,11 @@ public class MainFrame extends JFrame {
 				for (int i = 0; i < Main.getWorkouts().size(); i++) {
 					areaStats.append(Statistics.getValueFromDay(Main.getWorkouts().get(i)) + "% ");
 					areaStats.append(Statistics.getValueAsDots(Main.getWorkouts().get(i)) + "\n");
+					if ((i + 1) < Main.getWorkouts().size()) {
+						if (Main.getWorkouts().get(i + 1).getDate().isAfter(Main.getWorkouts().get(i).getDate().plusDays(7))) {
+							areaStats.append("________________________________________\n");
+						}
+					}
 				}
 				areaLeast.setCaretPosition(0);
 				panelContent.hide();
