@@ -80,7 +80,7 @@ SitUps-10-0-0
 Crunches-20-10-0
 Bridges-10-0-0
 Scissors-40-0-0
-DanceWork.-1-1-1
+DanceWork.-3-3-3- 3/5 Schwierigkeit
 --
 2022-11-14
 Beinpresse-15-15-15-25kg
@@ -139,4 +139,11 @@ Leg Raise-10-0-0-20 back extension, 35sek plank
 Biceps Curls-11-10-12
 SitUps-15-0-0
 Shoulder-10-10-10
+--
+2022-12-26
+Crocodile-25-25-0
+Bridges-25-15-10
+Crunches-15-15-0
+Scissors-35-15-0
+Leg Raise-10-0-0
 --
